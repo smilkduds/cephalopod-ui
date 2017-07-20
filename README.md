@@ -13,13 +13,10 @@ walking meat.
 better view of their heading.
 * Days survived and current time - moved to under the compass and spread out,
 also the color is changed to better stand out.
-
 * Item quality colors - changed to be more in tune with classic RPG item quality
 colors.
  * original: grey > brown > orange > yellow > green > blue  > purple
  * modified: grey > white > green > blue > purple > orange > cyan
-
-
 * Health and Stamina - moved from lower left to above the toolbelt. Again like a
 common RPG interface.
 * Experience - added an experience level bar and current level.
