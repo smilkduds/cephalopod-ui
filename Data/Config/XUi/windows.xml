@@ -26,7 +26,7 @@
 				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30" />
 				<sprite depth="3" pos="2,-102" width="100" height="30" color="244,177,107,128" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" />
+				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
 			</rect>
 			<!-- water -->
 			<rect pos="39,0" width="34" height="104" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
@@ -34,7 +34,7 @@
 				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30" />
 				<sprite depth="3" pos="2,-102" width="100" height="30" color="111,167,218,128" type="filled" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" />
+				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
 			</rect>
 		</rect>
     <!-- health and stamina -->
@@ -60,7 +60,8 @@
     <rect pos="76,-37" width="603" height="12" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
       <sprite depth="1" name="border" style="cui.border.sprite" height="14" />
       <sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" width="599" height="10" />
-      <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
+      <!-- <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" /> -->
+			<sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="253,215,102,255" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
       <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
     </rect>
     <!-- world information -->
