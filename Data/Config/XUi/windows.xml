@@ -23,7 +23,10 @@
 			<!-- food -->
 			<rect pos="0,0" width="34" height="104" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
 				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30" />
+				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30">
+					<sprite depth="2" pos="0,-34" width="15" height="3" color="[black]" type="sliced" />
+					<sprite depth="2" pos="0,-67" width="15" height="3" color="[black]" type="sliced" />
+				</sprite>
 				<sprite depth="3" pos="2,-102" width="100" height="30" color="244,177,107,128" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" />
 				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
@@ -31,7 +34,10 @@
 			<!-- water -->
 			<rect pos="39,0" width="34" height="104" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
 				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30" />
+				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30">
+					<sprite depth="2" pos="15,-34" width="15" height="4" color="[black]" type="sliced" />
+					<sprite depth="2" pos="15,-67" width="15" height="4" color="[black]" type="sliced" />
+				</sprite>
 				<sprite depth="3" pos="2,-102" width="100" height="30" color="111,167,218,128" type="filled" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" />
 				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
