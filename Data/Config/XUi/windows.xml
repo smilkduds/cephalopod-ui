@@ -11,7 +11,7 @@
 		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
 		<!-- day and time -->
-		<rect pos="50,-50" width="300" height="30">
+		<rect pos="50,-45" width="300" height="30">
 			<label depth="2" width="150" height="30" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
 			<label depth="2" width="150" height="30" pos="150,0" text="Time: [DECEA3]{time|always}[-]" font_size="28" effect="outline" upper_case="true" justify="right" />
 		</rect>
