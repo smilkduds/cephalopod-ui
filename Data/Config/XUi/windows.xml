@@ -11,7 +11,7 @@
 		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
 		<!-- day and time -->
-		<rect pos="50,-50" width="300" height="30">
+		<rect pos="50,-45" width="300" height="30">
 			<label depth="2" width="150" height="30" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
 			<label depth="2" width="150" height="30" pos="150,0" text="Time: [DECEA3]{time|always}[-]" font_size="28" effect="outline" upper_case="true" justify="right" />
 		</rect>
@@ -19,7 +19,7 @@
 
   <window name="CUI_Toolbelt" style="cui.toolbelt.window">
 		<!-- food and water -->
-		<rect pos="0,-40" width="73" height="104">
+		<rect pos="0,-28" width="73" height="104">
 			<!-- food -->
 			<rect pos="0,0" width="34" height="104" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
 				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
@@ -41,16 +41,16 @@
 		<rect pos="76,0" width="603" height="34">
 			<!-- health -->
 			<rect pos="0,0" width="254" height="34" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
-				<sprite depth="1" name="border" style="smd.border.sprite" height="34" />
-				<sprite depth="2" name="background" style="smd.background.sprite" pos="2,-2" height="30" width="250" />
+				<sprite depth="1" name="border" style="cui.border.sprite" height="34" />
+				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="30" width="250" />
 				<sprite depth="3" name="BarContent" pos="2,-2" height="30" width="250" color="222,102,102,128" type="filled" fill="{playerhealthfill}" controller="PlayerStatsWindow" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_add" size="20,20" foregroundlayer="true" />
 				<label depth="5" name="TextContent" pos="32,-7" height="20" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="left" effect="outline" pivot="topleft" />
 			</rect>
 			<!-- stamina -->
 			<rect pos="349,0" width="254" height="34" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
-				<sprite depth="1" name="border" style="smd.border.sprite" height="34" />
-				<sprite depth="2" name="background" style="smd.background.sprite" pos="2,-2" height="30" width="250" />
+				<sprite depth="1" name="border" style="cui.border.sprite" height="34" />
+				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="30" width="250" />
 				<sprite depth="3" name="BarContent" pos="252,-32" height="30" width="250" color="146,194,125,128" type="filled" fill="{playerstaminafill}" controller="PlayerStatsWindow" rotation="180" />
 				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_run" size="20,20" foregroundlayer="true" />
 				<label depth="5" name="TextContent" pos="32,-7" height="20" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="left" effect="outline" pivot="topleft" />
@@ -58,13 +58,13 @@
 		</rect>
     <!-- experience -->
     <rect pos="76,-37" width="603" height="12" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
-      <sprite depth="1" name="border" style="smd.border.sprite" height="14" />
-      <sprite depth="2" name="background" style="smd.background.sprite" pos="2,-2" width="599" height="10" />
+      <sprite depth="1" name="border" style="cui.border.sprite" height="14" />
+      <sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" width="599" height="10" />
       <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
       <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
     </rect>
     <!-- world information -->
-    <rect pos="682,-64" width="77" height="76">
+    <rect pos="682,-55" width="77" height="76">
       <rect pos="0,0" width="77" height="22">
         <sprite depth="2" name="tempIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_temperature" />
         <label depth="2" name="tempLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{maptemperature}[-]" effect="outline" controller="MapStats" />
