@@ -60,7 +60,8 @@
     <rect pos="76,-37" width="603" height="12" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
       <sprite depth="1" name="border" style="cui.border.sprite" height="14" />
       <sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" width="599" height="10" />
-      <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
+      <!-- <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" /> -->
+			<sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="253,215,102,255" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
       <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
     </rect>
     <!-- world information -->
