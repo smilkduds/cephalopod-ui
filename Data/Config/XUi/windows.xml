@@ -19,7 +19,7 @@
 
   <window name="CUI_Toolbelt" style="cui.toolbelt.window">
 		<!-- food and water -->
-		<rect pos="0,-40" width="73" height="104">
+		<rect pos="0,-28" width="73" height="104">
 			<!-- food -->
 			<rect pos="0,0" width="34" height="104" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
 				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
@@ -64,7 +64,7 @@
       <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
     </rect>
     <!-- world information -->
-    <rect pos="682,-64" width="77" height="76">
+    <rect pos="682,-55" width="77" height="76">
       <rect pos="0,0" width="77" height="22">
         <sprite depth="2" name="tempIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_temperature" />
         <label depth="2" name="tempLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{maptemperature}[-]" effect="outline" controller="MapStats" />
