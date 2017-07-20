@@ -63,6 +63,21 @@
       <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="192,123,159,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
       <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
     </rect>
+    <!-- world information -->
+    <rect pos="682,-64" width="77" height="76">
+      <rect pos="0,0" width="77" height="22">
+        <sprite depth="2" name="tempIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_temperature" />
+        <label depth="2" name="tempLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{maptemperature}[-]" effect="outline" controller="MapStats" />
+      </rect>
+      <rect pos="0,-27" width="77" height="22">
+        <sprite depth="2" name="windIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_wind" />
+        <label depth="2" name="windLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{mapwind} MPH[-]" effect="outline" controller="MapStats" />
+      </rect>
+      <rect pos="0,-54" width="77" height="22">
+        <sprite depth="2" name="elevIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_climb" />
+        <label depth="2" name="elevLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{mapelevation} M[-]" effect="outline" controller="MapStats" />
+      </rect>
+    </rect>
 	</window>
 
 	<!-- END CEPHALOPOD UI -->
