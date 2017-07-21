@@ -84,6 +84,15 @@
         <label depth="2" name="elevLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{mapelevation} M[-]" effect="outline" controller="MapStats" />
       </rect>
     </rect>
+
+		<!-- active item -->
+		<rect pos="682,0" width="129" height="36" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+			<sprite depth="2" name="border" style="cui.border.sprite" />
+			<sprite depth="3" name="background" style="cui.background.sprite" pos="2,-2" width="125" height="32" />
+			<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="2,-2" color="{staticoncolor}" foregroundlayer="true" />
+			<label depth="6" name="TextContent" pos="43,-4" font_size="28" color="[white]" justify="left" text="{statcurrentwithmax}" height="30" />
+		</rect>
+
 	</window>
 
 	<!-- END CEPHALOPOD UI -->
