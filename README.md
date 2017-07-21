@@ -24,13 +24,13 @@ common RPG interface.
 on your dietary needs. Remember a hungry survivor, is a dead survivor.
 * Climate information - current air temperature, wind speed, and elevation are
 positioned on the right side of the toolbelt.
+* Current item ammo - moving this element from the lower right corner to a more
+centered position. So you can more easily tell if you have just run out of ammo
+and should club your partner in the knees or make a stand worthy of the Alamo.
 
 ## Planned Features
 The following are features currently in development.
 
 * Active de/buffs - window showing the active buffs and debuffs, their name, and
 time duration remaining.
-* Current item ammo - moving this element from the lower right corner to a more
-centered position. So you can more easily tell if you have just run out of ammo
-and should club your partner in the knees or make a stand worthy of the Alamo.
 * Quest tracking - tidy up the screen a bit.
