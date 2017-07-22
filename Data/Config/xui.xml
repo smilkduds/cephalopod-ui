@@ -112,6 +112,8 @@
 			<window name="HUDRightStatBars" anchor="RightBottom" />
 			<window name="windowQuestTracker" anchor="RightTop" />
       <window name="CUI_Toolbelt" />
+			<window name="CUI_Toolbelt_Left" />
+			<window name="CUI_Toolbelt_Right" />
 		</window_group>
     <!-- END CEPHALOPOD UI -->
 
