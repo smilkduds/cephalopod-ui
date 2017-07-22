@@ -4,7 +4,6 @@
 		<style_entry name="anchor" value="CenterBottom" />
 		<style_entry name="size" value="603,48" />
 		<style_entry name="pos" value="-313,135" />
-		<!-- <style_entry name="color" value="[black]" /> -->
 		<style_entry name="backgroundcolor" value="[black]" />
 	</style>
 
@@ -12,15 +11,13 @@
 		<style_entry name="anchor" value="CenterBottom" />
 		<style_entry name="size" value="67,126" />
 		<style_entry name="pos" value="-379,135" />
-		<!-- <style_entry name="color" value="[black]" /> -->
 		<style_entry name="backgroundcolor" value="[black]" />
 	</style>
 
 	<style name="cui.toolbelt.right.window" type="window">
 		<style_entry name="anchor" value="CenterBottom" />
-		<style_entry name="size" value="66,126" />
+		<style_entry name="size" value="86,126" />
 		<style_entry name="pos" value="290,135" />
-		<!-- <style_entry name="color" value="[black]" /> -->
 		<style_entry name="backgroundcolor" value="[black]" />
 	</style>
 
