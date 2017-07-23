@@ -31,6 +31,13 @@
 		<style_entry name="anchor" value="RightBottom" />
 	</style>
 
+	<style name="cui.toolbelt.buffslist.window" type="window">
+		<style_entry name="anchor" value="LeftBottom" />
+		<style_entry name="size" value="320,325" />
+		<style_entry name="pos" value="9,420" />
+		<style_entry name="controller" value="ActiveBuffWindow" />
+	</style>
+
 	<style name="cui.border.sprite" type="sprite">
 		<style_entry name="color" value="[black]" />
 		<style_entry name="type" value="sliced" />

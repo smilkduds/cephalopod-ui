@@ -137,6 +137,26 @@
 		</rect>
 	</window>
 
+	<window name="CUI_Buffs_List" style="cui.toolbelt.buffslist.window">
+		<panel name="content" depth="0" pos="0,-40" disableautobackground="true">
+			<rect height="43">
+				<sprite depth="8" name="backgorundMain" pos="9999,9999" type="sliced" />
+				<sprite pos="9999,9999" type="sliced" color="[mediumGrey]" />
+				<panel pos="9999,9999" height="43" disableautobackground="true">
+					<button depth="4" name="pageDown" style="icon30px, press" pos="9999,9999" sprite="ui_game_symbol_arrow_left" pivot="center" sound="[paging_click]" />
+					<rect depth="4" pos="9999,9999">
+						<sprite name="background" pos="9999,9999" style="icon30px" color="[black]" type="sliced" />
+						<label depth="5" name="pageNumber" pos="9999,9999" width="30" height="28" text="1" font_size="26" justify="center" />
+					</rect>
+					<button depth="4" name="pageUp" style="icon30px, press" pos="9999,9999" sprite="ui_game_symbol_arrow_right" pivot="center" sound="[paging_click]" />
+				</panel>
+			</rect>
+			<grid name="buffs" rows="6" cols="1" pos="3,-43" cell_width="168" cell_height="26" repeat_content="true" controller="ActiveBuffList">
+				<CUI_active_buffs />
+			</grid>
+		</panel>
+	</window>
+
 	<!-- END CEPHALOPOD UI -->
 
 	<window name="HUDLeftStatBars">

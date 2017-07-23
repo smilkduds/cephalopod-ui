@@ -116,6 +116,7 @@
 			<window name="CUI_Toolbelt_Right" />
 			<window name="CUI_Vehicle" />
 			<window name="CUI_Collected_Items" />
+			<window name="CUI_Buffs_List" />
 		</window_group>
     <!-- END CEPHALOPOD UI -->
 
