@@ -21,6 +21,12 @@
 		<style_entry name="backgroundcolor" value="[black]" />
 	</style>
 
+	<style name="cui.toolbelt.vehicle.window" type="window">
+		<style_entry name="anchor" value="CenterBottom" />
+		<style_entry name="size" value="603,78" />
+		<style_entry name="pos" value="-313,87" />
+	</style>
+
 	<style name="cui.border.sprite" type="sprite">
 		<style_entry name="color" value="[black]" />
 		<style_entry name="type" value="sliced" />

@@ -1,12 +1,11 @@
 <windows>
 	<!-- CEPHALOPOD UI -->
 	<window name="CUI_Compass" style="compass.window" controller="CompassWindow">
-		<!-- draw default compass and background -->
 		<sprite style="compass.window.background.border" />
 		<sprite style="compass.window.background" />
 		<sprite style="compass.window.compass.background">
 			<!-- draw new center crosshair -->
-			<sprite depth="11" pos="150,0" width="1" color="222,206,163,255" type="sliced" />
+			<sprite depth="11" pos="149,0" width="2" color="222,206,163,255" type="sliced" />
 		</sprite>
 		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
@@ -25,7 +24,7 @@
 			<rect pos="3,-3" width="250" height="30" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
 				<sprite depth="3" name="BarContent" pos="0,0" width="250" height="30" color="222,102,102,128" type="filled" fill="{playerhealthfill}" controller="PlayerStatsWindow" />
 				<sprite depth="4" name="Icon" pos="5,-5" sprite="ui_game_symbol_add" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="30,-5" height="20" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="left" effect="outline" pivot="topLeft" />
+				<label depth="5" name="TextContent" pos="30,0" height="30" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="left" pivot="topLeft" />
 			</rect>
 			<!-- active item -->
 			<sprite depth="2" name="background" style="cui.background.sprite" pos="256,-3" width="91" height="30" />
@@ -38,7 +37,7 @@
 			<rect pos="350,-3" width="250" height="30" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
 				<sprite depth="3" name="BarContent" pos="250,-30" width="250" height="30" color="146,194,125,128" type="filled" fill="{playerstaminafill}" controller="PlayerStatsWindow" rotation="180" />
 				<sprite depth="4" name="Icon" pos="225,-5" sprite="ui_game_symbol_run" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="0,-5" height="20" width="220" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="right" effect="outline" pivot="topLeft" />
+				<label depth="5" name="TextContent" pos="0,0" height="30" width="220" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="right" pivot="topLeft" />
 			</rect>
 			<!-- experience -->
 			<sprite depth="2" name="background" style="cui.background.sprite" pos="3,-36" width="597" height="12" />
@@ -101,6 +100,31 @@
 		</rect>
 	</window>
 
+	<window name="CUI_Vehicle" style="cui.toolbelt.vehicle.window">
+		<rect pos="0,0" width="603" height="78" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+			<sprite depth="1" name="border" style="cui.border.sprite" />
+			<!-- vehicle health -->
+			<sprite depth="2" name="background" style="cui.background.sprite" pos="3,-3" width="250" height="72" />
+			<rect pos="3,-3" width="250" height="72" controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+				<sprite depth="3" name="BarContent" pos="0,0" width="250" height="72" sprite="{statimage|once}" type="filled" />
+				<sprite depth="4" name="Icon" pos="5,-5" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" foregroundlayer="true" />
+				<label depth="5" name="TextContent" pos="42,-5" width="208" height="30" font_size="28" color="[white]" justify="left" text="{statcurrentwithmax}" />
+			</rect>
+			<!-- vehicle battery -->
+			<sprite depth="2" name="background" style="cui.background.sprite" pos="256,-3" width="91" height="72" />
+			<rect pos="256,-3" width="91" height="72" controller="HUDStatBar" stat_type="VehicleBattery" visible="{statvisible}">
+				<sprite depth="4" name="Icon" pos="30,-5" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" foregroundlayer="true" />
+				<label depth="5" name="TextContent" pos="0,-42" width="91" height="30" font_size="28" color="[white]" justify="center" text="{statcurrentwithmax}" />
+			</rect>
+			<!-- vehicle fuel -->
+			<sprite depth="2" name="background" style="cui.background.sprite" pos="350,-3" width="250" height="72" />
+			<rect pos="350,-3" width="250" height="72" controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}">
+				<sprite depth="3" name="BarContent" pos="250,-72" width="250" height="72" sprite="{statimage|once}" type="filled" rotation="180" />
+				<sprite depth="4" name="Icon" pos="213,-5" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="32,32" foregroundlayer="true" />
+				<label depth="5" name="TextContent" pos="0,-5" width="208" height="30" font_size="28" color="[white]" justify="right" text="{statcurrentwithmax}" />
+			</rect>
+		</rect>
+	</window>
 
 	<!-- END CEPHALOPOD UI -->
 
