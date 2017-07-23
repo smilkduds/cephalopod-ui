@@ -27,6 +27,10 @@
 		<style_entry name="pos" value="-313,87" />
 	</style>
 
+	<style name="cui.toolbelt.collecteditems.window" type="window">
+		<style_entry name="anchor" value="RightBottom" />
+	</style>
+
 	<style name="cui.border.sprite" type="sprite">
 		<style_entry name="color" value="[black]" />
 		<style_entry name="type" value="sliced" />

@@ -126,6 +126,17 @@
 		</rect>
 	</window>
 
+	<window name="CUI_Collected_Items" style="cui.toolbelt.collecteditems.window">
+		<rect name="hud" pos="-90,61" side="right" controller="CollectedItemList" pivot="BottomLeft">
+			<panel width="228" height="73" name="item" visible="false" pivot="right" disableautobackground="true" pos="70,0">
+				<sprite depth="3" pos="0,0" name="Background" sprite="ui_game_popup" height="73" width="222" pivot="center" />
+				<sprite depth="4" name="Icon" atlas="ItemIconAtlas" size="56,48" pos="50,0" pivot="center" foregroundlayer="true" />
+				<label depth="5" name="TextContent" font_size="32" color="[white]" justify="center" height="30" pivot="center" />
+				<sprite depth="5" pos="0,16" width="32" height="32" name="Negative" sprite="ui_game_symbol_x" color="[red]" />
+			</panel>
+		</rect>
+	</window>
+
 	<!-- END CEPHALOPOD UI -->
 
 	<window name="HUDLeftStatBars">
