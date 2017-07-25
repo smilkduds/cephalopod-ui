@@ -55,6 +55,20 @@
 			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="124" width="30" />
 			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="36,-3" height="124" width="30" />
 		</rect>
+		<!-- food -->
+		<rect controller="HUDStatbar" stat_type="Food" visible="{statvisible}" pos="3,-3" height="30" width="124">
+			<sprite depth="3" sprite="menu_empty3px" color="244,177,107,191" type="filled" fillcenter="true" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-124" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-41" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-82" />
+		</rect>
+		<!-- water -->
+		<rect controller="HUDStatbar" stat_type="Water" visible="{statvisible}" pos="36,-3" height="30" width="124">
+			<sprite depth="3" sprite="menu_empty3px" color="111,167,218,191" type="filled" fillcenter="true" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-124" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-41" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-82" />
+		</rect>
 	</window>
 
 	<window name="cui_toolbelt_right" style="cui.toolbelt.right.window">
