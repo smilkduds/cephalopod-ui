@@ -57,14 +57,14 @@
 		</rect>
 		<!-- food -->
 		<rect controller="HUDStatbar" stat_type="Food" visible="{statvisible}" pos="3,-3" height="30" width="127">
-			<sprite depth="3" sprite="menu_empty3px" color="244,177,107,191" type="filled" fillcenter="true" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-124" />
+			<sprite depth="3" sprite="menu_empty3px" color="244,177,107,191" type="filled" fillcenter="true" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-127" />
 			<sprite depth="4" name="Icon" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" pos="5,-5" />
 			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-42" />
 			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-84" />
 		</rect>
 		<!-- water -->
 		<rect controller="HUDStatbar" stat_type="Water" visible="{statvisible}" pos="36,-3" height="30" width="127">
-			<sprite depth="3" sprite="menu_empty3px" color="111,167,218,191" type="filled" fillcenter="true" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-124" />
+			<sprite depth="3" sprite="menu_empty3px" color="111,167,218,191" type="filled" fillcenter="true" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-127" />
 			<sprite depth="4" name="Icon" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" pos="5,-5" />
 			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-42" />
 			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-84" />
@@ -82,12 +82,12 @@
 		<!-- map temperature -->
 		<rect pos="3,-3" height="30" width="85">
 			<sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="20,20" foregroundlayer="true" pos="5,-5" />
-			<label depth="5" name="Label" text=" [DECEA3]{maptemperature}[-]" font_size="20" color="[white]" justify="left" effect="outline" controller="MapStats" pos="30,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{maptemperature}[-]" font_size="20" color="[white]" justify="left" controller="MapStats" pos="30,-5" />
 		</rect>
 		<!-- core temperature -->
 		<rect pos="3,-36" height="30" width="85">
 			<!-- <sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="20,20" foregroundlayer="true" pos="5,-5" /> -->
-			<label depth="5" name="Label" text=" [DECEA3]{playercoretemp}[-]" font_size="20" color="[white]" justify="left" effect="outline" controller="PlayerStatsWindow" pos="30,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{playercoretemp}[-]" font_size="20" color="[white]" justify="left" controller="PlayerStatsWindow" pos="30,-5" />
 		</rect>
 		<!-- wind speed -->
 		<rect pos="3,-69" height="30" width="85">
@@ -97,7 +97,7 @@
 		<!-- elevation -->
 		<rect pos="3,-102" height="30" width="85">
 			<sprite depth="4" name="Icon" sprite="ui_game_symbol_climb" size="20,20" foregroundlayer="true" pos="5,-5" />
-			<label depth="5" name="Label" text=" [DECEA3]{mapelevation} M[-]" font_size="20" color="[white]" justify="left" effect="outline" controller="MapStats" pos="30,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{mapelevation} M[-]" font_size="20" color="[white]" justify="left" controller="MapStats" pos="30,-5" />
 		</rect>
 	</window>
 
