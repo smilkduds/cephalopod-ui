@@ -6,7 +6,7 @@
 		<style_entry name="controller" value="ToolbeltWindow" />
 		<style_entry name="cursor_area" value="true" />
 		<style_entry name="depth" value="5" />
-		<style_entry name="pos" value="-313,75" />
+		<style_entry name="pos" value="-313,80" />
 		<style_entry name="size" value="603,80" />
 		<style_entry name="visible" value="{toolbeltvisible}" />
 	</style>
@@ -15,7 +15,7 @@
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="cursor_area" value="true" />
 		<style_entry name="depth" value="5" />
-		<style_entry name="pos" value="-313,127" />
+		<style_entry name="pos" value="-313,132" />
 		<style_entry name="size" value="603,55" />
 	</style>
 	<style name="cui.toolbelt.left.window" type="window">
@@ -23,16 +23,16 @@
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="cursor_area" value="true" />
 		<style_entry name="depth" value="5" />
-		<style_entry name="pos" value="-380,127" />
-		<style_entry name="size" value="69,130" />
+		<style_entry name="pos" value="-380,132" />
+		<style_entry name="size" value="69,135" />
 	</style>
 	<style name="cui.toolbelt.right.window" type="window">
 		<style_entry name="anchor" value="CenterBottom" />
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="cursor_area" value="true" />
 		<style_entry name="depth" value="5" />
-		<style_entry name="pos" value="288,127" />
-		<style_entry name="size" value="81,130" />
+		<style_entry name="pos" value="288,132" />
+		<style_entry name="size" value="91,135" />
 	</style>
 	<!-- end cephalopod ui -->
 	<global>
