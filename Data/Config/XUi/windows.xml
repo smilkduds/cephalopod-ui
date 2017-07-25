@@ -18,6 +18,34 @@
 		<label depth="2" pos="534,-12" text=" [DECEA3]8" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
 	</window>
 
+	<window name="cui_toolbelt_player" style="cui.toolbelt.player.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="30" width="250" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="256,-3" height="30" width="91" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="350,-3" height="30" width="250" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-36" height="19" width="597" />
+		</rect>
+	</window>
+
+	<window name="cui_toolbelt_left" style="cui.toolbelt.left.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="124" width="30" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="36,-3" height="124" width="30" />
+		</rect>
+	</window>
+
+	<window name="cui_toolbelt_right" style="cui.toolbelt.right.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="30" width="75" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-36" height="30" width="75" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-69" height="30" width="75" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-102" height="30" width="75" />
+		</rect>
+	</window>
+
 	<!-- end cephalopod ui -->
 
 

@@ -10,6 +10,30 @@
 		<style_entry name="size" value="603,80" />
 		<style_entry name="visible" value="{toolbeltvisible}" />
 	</style>
+	<style name="cui.toolbelt.player.window" type="window">
+		<style_entry name="anchor" value="CenterBottom" />
+		<style_entry name="backgroundcolor" value="[black]" />
+		<style_entry name="cursor_area" value="true" />
+		<style_entry name="depth" value="5" />
+		<style_entry name="pos" value="-313,127" />
+		<style_entry name="size" value="603,55" />
+	</style>
+	<style name="cui.toolbelt.left.window" type="window">
+		<style_entry name="anchor" value="CenterBottom" />
+		<style_entry name="backgroundcolor" value="[black]" />
+		<style_entry name="cursor_area" value="true" />
+		<style_entry name="depth" value="5" />
+		<style_entry name="pos" value="-380,127" />
+		<style_entry name="size" value="69,130" />
+	</style>
+	<style name="cui.toolbelt.right.window" type="window">
+		<style_entry name="anchor" value="CenterBottom" />
+		<style_entry name="backgroundcolor" value="[black]" />
+		<style_entry name="cursor_area" value="true" />
+		<style_entry name="depth" value="5" />
+		<style_entry name="pos" value="288,127" />
+		<style_entry name="size" value="81,130" />
+	</style>
 	<!-- end cephalopod ui -->
 	<global>
 		<!--
