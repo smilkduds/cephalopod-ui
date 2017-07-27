@@ -101,6 +101,21 @@
 		</rect>
 	</window>
 
+	<window name="cui_compass" style="cui.compass.window" controller="CompassWindow">
+		<sprite style="cui.compass.window.border.sprite" />
+		<sprite style="cui.compass.window.background.sprite" />
+		<sprite style="cui.compass.window.compass.background.sprite">
+			<sprite depth="11" pos="148,0" width="3" color="222,206,163,255" type="sliced" />
+		</sprite>
+		<texture style="cui.compass.window.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
+		</texture>
+
+		<rect pos="50,-42" width="300" height="30">
+			<label depth="2" width="150" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
+			<label depth="2" width="150" pos="155,0" text="Time: [DECEA3]{time|always}" font_size="28" effect="outline" upper_case="true" justify="right" />
+		</rect>
+	</window>
+
 	<!-- end cephalopod ui -->
 
 

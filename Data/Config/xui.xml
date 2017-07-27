@@ -82,9 +82,12 @@
 			<window name="dragAndDropItemStack" />
 		</window_group>
 
+		<!-- cephalopod ui -->
 		<window_group name="compass" actionSet="false">
-			<window name="windowCompass" />
+			<!-- <window name="windowCompass" /> -->
+			<window name="cui_compass" />
 		</window_group>
+		<!-- end cephalopod ui -->
 
 		<window_group name="toolTip" actionSet="false">
 			<window name="toolTip" />
