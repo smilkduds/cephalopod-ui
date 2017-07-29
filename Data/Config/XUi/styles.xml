@@ -80,6 +80,13 @@
 		<style_entry name="pos" value="-30,-15" />
 		<style_entry name="size" value="228,73" />
 	</style>
+	<style name="cui.buffs.popout.window" type="window">
+		<style_entry name="anchor" value="LeftBottom" />
+		<style_entry name="backgroundcolor" value="[black]" />
+		<style_entry name="depth" value="5" />
+		<style_entry name="pos" value="10,53" />
+		<style_entry name="size" value="168,43" />
+	</style>
 
 	<!-- end cephalopod ui -->
 	<global>

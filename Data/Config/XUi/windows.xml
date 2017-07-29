@@ -126,7 +126,15 @@
 			</panel>
 		</rect>
 	</window>
-	
+
+	<window name="cui_buffs_popout" style="cui.buffs.popout.window" controller="BuffPopoutList">
+		<panel name="item" visible="false" disableautobackground="true">
+			<sprite depth="3" name="Background" sprite="ui_game_popup" color="[transparent]" pos="0,0" height="43" width="162" flip="Horizontally" />
+			<sprite depth="4" name="Icon" color="[transparent]" pos="5,-5" size="36,32" />
+			<label depth="6" name="TextContent" color="[white]" font_size="28" pos="46,-5" height="30" justify="left" />
+		</panel>
+	</window>
+
 	<!-- end cephalopod ui -->
 
 

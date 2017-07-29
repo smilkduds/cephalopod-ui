@@ -109,7 +109,7 @@
 		<!-- cephalopod ui -->
 		<window_group name="toolbelt" actionSet="false">
 			<!-- <window name="windowToolbelt" anchor="CenterBottom" /> -->
-			<window name="HUDLeftStatBars" anchor="LeftBottom" />
+			<!-- <window name="HUDLeftStatBars" anchor="LeftBottom" /> -->
 			<!-- <window name="HUDRightStatBars" anchor="RightBottom" /> -->
 			<window name="windowQuestTracker" anchor="RightTop" />
 			<window name="cui_toolbelt_items" />
@@ -117,6 +117,7 @@
 			<window name="cui_toolbelt_left" />
 			<window name="cui_toolbelt_right" />
 			<window name="cui_collected_items" />
+			<window name="cui_buffs_popout" />
 		</window_group>
 		<!-- end cephalopod ui -->
 
