@@ -1,101 +1,168 @@
 <windows>
-	<!-- CEPHALOPOD UI -->
-	<window name="CUI_Compass" style="compass.window" controller="CompassWindow">
-		<!-- draw default compass and background -->
-		<sprite style="compass.window.background.border" />
-		<sprite style="compass.window.background" />
-		<sprite style="compass.window.compass.background">
-			<!-- draw new center crosshair -->
-			<sprite depth="11" pos="150,0" width="1" color="222,206,163,255" type="sliced" />
+	<!-- cephalopod ui -->
+	<window name="cui_toolbelt_items" style="cui.toolbelt.items.window" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+		<rect>
+			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+			<grid depth="1" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
+				<item_stack name="0"/>
+			</grid>
+		</rect>
+		<!-- numbers on toolbelt -->
+		<label depth="2" pos="9,-12" text=" [DECEA3]1" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="84,-12" text=" [DECEA3]2" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="159,-12" text=" [DECEA3]3" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="234,-12" text=" [DECEA3]4" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="309,-12" text=" [DECEA3]5" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="384,-12" text=" [DECEA3]6" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="459,-12" text=" [DECEA3]7" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+		<label depth="2" pos="534,-12" text=" [DECEA3]8" font_size="20" pivot="center" effect="outline" upper_case="true" justify="center"/>
+	</window>
+
+	<window name="cui_toolbelt_player" style="cui.toolbelt.player.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="30" width="250" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="256,-3" height="30" width="91" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="350,-3" height="30" width="250" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-36" height="15" width="597" />
+		</rect>
+		<!-- health bar -->
+		<rect controller="HUDStatBar" stat_type="Health" visible="{statvisible}" pos="3,-3" height="30" width="250">
+			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_health]" type="filled" fillcenter="true" fill="{playerhealthfill}" controller="PlayerStatsWindow" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_add" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="left" pivot="topLeft" pos="30,0" />
+		</rect>
+		<!-- ammo capacity -->
+		<rect controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}" pos="256,-3" height="30" width="91">
+			<label depth="5" name="TextContent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="center" effect="outline" />
+		</rect>
+		<!-- stamina bar -->
+		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" pos="350,-3" height="30" width="250">
+			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_stamina]" type="filled" fillcenter="true" fill="{playerstaminafill}" controller="PlayerStatsWindow" rotation="180" pos="250,-30" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_run" size="20,20" foregroundlayer="true" pos="225,-5" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="right" pivot="topLeft" pos="0,0" width="220" />
+		</rect>
+		<!-- experience bar -->
+		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" pos="3,-36" height="15" width="597">
+			<sprite depth="3" sprite="menu_empty3px" color="[cui_experience]" type="filled" fillcenter="true" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
+			<label depth="5" text=" [DECEA3]{playerlevel}[-]" font_size="24" justify="center" effect="outline" controller="PlayerStatsWindow" height="28" pos="0,5" />
+		</rect>
+	</window>
+
+	<window name="cui_toolbelt_left" style="cui.toolbelt.left.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="127" width="30" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="36,-3" height="127" width="30" />
+		</rect>
+		<!-- food -->
+		<rect controller="HUDStatbar" stat_type="Food" visible="{statvisible}" pos="3,-3" height="30" width="127">
+			<sprite depth="3" sprite="menu_empty3px" color="[cui_food]" type="filled" fillcenter="true" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-127" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-42" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="0,-84" />
+		</rect>
+		<!-- water -->
+		<rect controller="HUDStatbar" stat_type="Water" visible="{statvisible}" pos="36,-3" height="30" width="127">
+			<sprite depth="3" sprite="menu_empty3px" color="[cui_water]" type="filled" fillcenter="true" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" pos="0,-127" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-42" />
+			<sprite depth="6" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" height="3" width="15" pos="15,-84" />
+		</rect>
+	</window>
+
+	<window name="cui_toolbelt_right" style="cui.toolbelt.right.window">
+		<rect>
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="30" width="85" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-36" height="30" width="85" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-69" height="30" width="85" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-102" height="30" width="85" />
+		</rect>
+		<!-- map temperature -->
+		<rect pos="3,-3" height="30" width="85">
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{maptemperature}[-]" font_size="20" color="[white]" justify="left" controller="MapStats" pos="30,-5" />
+		</rect>
+		<!-- core temperature -->
+		<rect pos="3,-36" height="30" width="85">
+			<!-- <sprite depth="4" name="Icon" sprite="ui_game_symbol_temperature" size="20,20" foregroundlayer="true" pos="5,-5" /> -->
+			<label depth="5" name="Label" text=" [DECEA3]{playercoretemp}[-]" font_size="20" color="[white]" justify="left" controller="PlayerStatsWindow" pos="30,-5" />
+		</rect>
+		<!-- wind speed -->
+		<rect pos="3,-69" height="30" width="85">
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_wind" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{mapwind} MPH[-]" font_size="20" color="[white]" justify="left" controller="MapStats" pos="30,-5" />
+		</rect>
+		<!-- elevation -->
+		<rect pos="3,-102" height="30" width="85">
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_climb" size="20,20" foregroundlayer="true" pos="5,-5" />
+			<label depth="5" name="Label" text=" [DECEA3]{mapelevation} M[-]" font_size="20" color="[white]" justify="left" controller="MapStats" pos="30,-5" />
+		</rect>
+	</window>
+
+	<window name="cui_compass" style="cui.compass.window" controller="CompassWindow">
+		<sprite style="cui.compass.window.border.sprite" />
+		<sprite style="cui.compass.window.background.sprite" />
+		<sprite style="cui.compass.window.compass.background.sprite">
+			<sprite depth="11" pos="148,0" width="3" color="222,206,163,255" type="sliced" />
 		</sprite>
-		<texture style="compass.window.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
+		<texture style="cui.compass.window.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
-		<!-- day and time -->
-		<rect pos="50,-45" width="300" height="30">
-			<label depth="2" width="150" height="30" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
-			<label depth="2" width="150" height="30" pos="150,0" text="Time: [DECEA3]{time|always}[-]" font_size="28" effect="outline" upper_case="true" justify="right" />
+
+		<rect pos="50,-42" width="300" height="30">
+			<label depth="2" width="150" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
+			<label depth="2" width="150" pos="155,0" text="Time: [DECEA3]{time|always}" font_size="28" effect="outline" upper_case="true" justify="right" />
 		</rect>
 	</window>
 
-  <window name="CUI_Toolbelt" style="cui.toolbelt.window">
-		<!-- food and water -->
-		<rect pos="0,-28" width="73" height="104">
-			<!-- food -->
-			<rect pos="0,0" width="34" height="104" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
-				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30">
-					<sprite depth="2" pos="0,-34" width="15" height="3" color="[black]" type="sliced" />
-					<sprite depth="2" pos="0,-67" width="15" height="3" color="[black]" type="sliced" />
-				</sprite>
-				<sprite depth="3" pos="2,-102" width="100" height="30" color="244,177,107,128" type="filled" fill="{playerfoodfill}" controller="PlayerStatsWindow" rotation="90" />
-				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" />
-				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
-			</rect>
-			<!-- water -->
-			<rect pos="39,0" width="34" height="104" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
-				<sprite depth="1" name="border" style="cui.border.sprite" height="104" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="100" width="30">
-					<sprite depth="2" pos="15,-34" width="15" height="4" color="[black]" type="sliced" />
-					<sprite depth="2" pos="15,-67" width="15" height="4" color="[black]" type="sliced" />
-				</sprite>
-				<sprite depth="3" pos="2,-102" width="100" height="30" color="111,167,218,128" type="filled" fill="{playerwaterfill}" controller="PlayerStatsWindow" rotation="90" />
-				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" />
-				<!-- <label depth="5" name="TextContent" pos="4,-80" width="28" text="{statcurrent}%" font_size="20" color="[white]" justify="center" effect="outline" /> -->
-			</rect>
+	<window name="cui_collected_items" style="cui.collected.items.window">
+		<rect name="hud" pos="-90,61" side="right" controller="CollectedItemList" pivot="BottomLeft">
+			<panel width="228" height="73" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
+				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="73" width="222" pivot="center" />
+				<sprite depth="4" name="Icon" atlas="ItemIconAtlas" pos="50,0" size="56,48" pivot="center" foregroundlayer="true" />
+				<label depth="6" name="TextContent" font_size="32" color="[white]" justify="center" height="30" pivot="center" />
+				<sprite depth="6" name="Negative" sprite="ui_game_symbol_x" color="[red]" pos="0,16" width="32" height="32" />
+			</panel>
 		</rect>
-    <!-- health and stamina -->
-		<rect pos="76,0" width="603" height="34">
-			<!-- health -->
-			<rect pos="0,0" width="254" height="34" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
-				<sprite depth="1" name="border" style="cui.border.sprite" height="34" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="30" width="250" />
-				<sprite depth="3" name="BarContent" pos="2,-2" height="30" width="250" color="222,102,102,128" type="filled" fill="{playerhealthfill}" controller="PlayerStatsWindow" />
-				<sprite depth="4" name="Icon" pos="7,-7" sprite="ui_game_symbol_add" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="34,-7" height="20" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="left" effect="outline" pivot="topleft" />
-			</rect>
-			<!-- stamina -->
-			<rect pos="349,0" width="254" height="34" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
-				<sprite depth="1" name="border" style="cui.border.sprite" height="34" />
-				<sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" height="30" width="250" />
-				<sprite depth="3" name="BarContent" pos="252,-32" height="30" width="250" color="146,194,125,128" type="filled" fill="{playerstaminafill}" controller="PlayerStatsWindow" rotation="180" />
-				<sprite depth="4" name="Icon" pos="225,-7" sprite="ui_game_symbol_run" size="20,20" foregroundlayer="true" />
-				<label depth="5" name="TextContent" pos="0,-7" width="220" height="20" text="{statcurrentwithmax}" font_size="20" color="[white]" justify="right" effect="outline" pivot="topleft" />
-			</rect>
-		</rect>
-    <!-- experience -->
-    <rect pos="76,-37" width="603" height="12" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
-      <sprite depth="1" name="border" style="cui.border.sprite" height="14" />
-      <sprite depth="2" name="background" style="cui.background.sprite" pos="2,-2" width="599" height="10" />
-      <sprite depth="3" pos="2,-2" width="599" height="10" type="filled" color="162,164,27,128" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
-      <label depth="4" pos="279,10" width="40" height="20" font_size="20" text=" [DECEA3]{playerlevel}[-]" effect="outline" justify="center" controller="PlayerStatsWindow" />
-    </rect>
-    <!-- world information -->
-    <rect pos="682,-55" width="77" height="76">
-      <rect pos="0,0" width="77" height="22">
-        <sprite depth="2" name="tempIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_temperature" />
-        <label depth="2" name="tempLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{maptemperature}[-]" effect="outline" controller="MapStats" />
-      </rect>
-      <rect pos="0,-27" width="77" height="22">
-        <sprite depth="2" name="windIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_wind" />
-        <label depth="2" name="windLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{mapwind} MPH[-]" effect="outline" controller="MapStats" />
-      </rect>
-      <rect pos="0,-54" width="77" height="22">
-        <sprite depth="2" name="elevIcon" style="icon22px" pos="0,0" sprite="ui_game_symbol_climb" />
-        <label depth="2" name="elevLabel" style="label" pos="27,0" width="50" height="22" text=" [DECEA3]{mapelevation} M[-]" effect="outline" controller="MapStats" />
-      </rect>
-    </rect>
-
-		<!-- active item -->
-		<rect pos="682,0" width="129" height="36" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
-			<sprite depth="2" name="border" style="cui.border.sprite" />
-			<sprite depth="3" name="background" style="cui.background.sprite" pos="2,-2" width="125" height="32" />
-			<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="2,-2" color="{staticoncolor}" foregroundlayer="true" />
-			<label depth="6" name="TextContent" pos="43,-4" font_size="28" color="[white]" justify="left" text="{statcurrentwithmax}" height="30" />
-		</rect>
-
 	</window>
 
-	<!-- END CEPHALOPOD UI -->
+	<window name="cui_buffs_popout" style="cui.buffs.popout.window" controller="BuffPopoutList">
+		<panel name="item" visible="false" disableautobackground="true">
+			<sprite depth="3" name="Background" sprite="ui_game_popup" color="[transparent]" pos="0,0" height="43" width="162" flip="Horizontally" />
+			<sprite depth="4" name="Icon" color="[transparent]" pos="5,-5" size="36,32" />
+			<label depth="6" name="TextContent" color="[white]" font_size="28" pos="46,-5" height="30" justify="left" />
+		</panel>
+	</window>
+
+	<window name="cui_vehicle" style="cui.vehicle.window">
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
+			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="75" width="250" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="256,-3" height="75" width="91" />
+			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="350,-3" height="75" width="250" />
+		</rect>
+		<!-- vehicle health -->
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}" pos="3,-3" height="75" width="250">
+			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_veh_health]" type="filled" fillcenter="true" fill="{vehiclehealthfill}" controller="VehicleStatsWindow" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_minibike" size="32,32" foregroundlayer="true" pos="5,-5" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="left" pivot="topLeft" pos="42,-5" height="30" width="208" />
+		</rect>
+		<!-- vehicle battery -->
+		<rect controller="HUDStatBar" stat_type="VehicleBattery" visible="{statvisible}" pos="256,-3" height="75" width="91">
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_battery" size="32,32" foregroundlayer="true" pos="30,-5" />
+			<label depth="5" name="TextContent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="center" pos="0,-40" height="30" />
+		</rect>
+		<!-- vehicle fuel -->
+		<rect controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}" pos="350,-3" height="75" width="250">
+			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_veh_fuel]" type="filled" fillcenter="true" fill="{vehiclefuelfill}" controller="VehicleStatsWindow" rotation="180" pos="250,-75" />
+			<sprite depth="4" name="Icon" sprite="ui_game_symbol_gas" size="32,32" foregroundlayer="true" pos="213,-5" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="right" pivot="topLeft" pos="0,-5" height="30" width="208" />
+		</rect>
+	</window>
+
+	<!-- end cephalopod ui -->
+
 
 	<window name="HUDLeftStatBars">
 		<grid name="hud" pos="9,98" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="left" >
@@ -720,7 +787,7 @@
 
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 87" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true">
-	<!--#$-IGS END.-$#-->
+	<!-- #$-IGS END.-$# -->
 
 		<rect>
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
