@@ -3,12 +3,10 @@
 	<style name="cui.toolbelt.items.window" type="window">
 		<style_entry name="anchor" value="CenterBottom" />
 		<style_entry name="backgroundcolor" value="[black]" />
-		<style_entry name="controller" value="ToolbeltWindow" />
 		<style_entry name="cursor_area" value="true" />
 		<style_entry name="depth" value="5" />
 		<style_entry name="pos" value="-313,80" />
 		<style_entry name="size" value="603,80" />
-		<style_entry name="visible" value="{toolbeltvisible}" />
 	</style>
 	<style name="cui.toolbelt.player.window" type="window">
 		<style_entry name="anchor" value="CenterBottom" />
@@ -87,8 +85,15 @@
 		<style_entry name="pos" value="10,53" />
 		<style_entry name="size" value="168,43" />
 	</style>
-
+	<style name="cui.vehicle.window" type="window">
+		<style_entry name="anchor" value="CenterBottom" />
+		<style_entry name="backgroundcolor" value="[black]" />
+		<style_entry name="depth" value="5" />
+		<style_entry name="pos" value="-313,80" />
+		<style_entry name="size" value="603,80" />
+	</style>
 	<!-- end cephalopod ui -->
+
 	<global>
 		<!--
 			GLOBAL STYLE ENTRIES
