@@ -88,6 +88,7 @@
 			<window name="cui_compass" />
 
 			<window name="cui_new_player" />
+      <window name="cui_new_wellness" />
 		</window_group>
 		<!-- end cephalopod ui -->
 

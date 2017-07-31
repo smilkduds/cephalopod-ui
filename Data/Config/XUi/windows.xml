@@ -193,6 +193,26 @@
       </grid>
     </rect>
   </window>
+
+  <window name="cui_new_wellness" style="cui.new.wellness.window">
+    <sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="233" />
+
+    <sprite depth="5" name="icon" sprite="ui_game_symbol_fork" size="20,20" foregroundlayer="true" pos="5,-3" />
+    <rect controller="HUDStatbar" stat_type="Food" visible="{statvisible}" pos="30,-3" size="200,20">
+      <sprite depth="3" sprite="menu_empty3px" color="[cui_food]" type="filled" fillcenter="true" fill="{playerfoodfill}" controller="PlayerStatsWindow" />
+    </rect>
+    <grid depth="8" rows="1" cols="4" cell_height="20" cell_width="50" repeat_content="true" pos="30,0">
+      <sprite depth="8" name="backgroundGauge" sprite="menu_empty3px" pos="-3,3" size="53,26" color="[black]" type="sliced" fillcenter="false" />
+    </grid>
+
+    <sprite depth="5" name="icon" sprite="ui_game_symbol_water" size="20,20" foregroundlayer="true" pos="5,-26" />
+    <rect controller="HUDStatbar" stat_type="Water" visible="{statvisible}" pos="30,-26" size="200,20">
+			<sprite depth="3" sprite="menu_empty3px" color="[cui_water]" type="filled" fillcenter="true" fill="{playerwaterfill}" controller="PlayerStatsWindow" />
+		</rect>
+    <grid depth="8" rows="1" cols="4" cell_height="20" cell_width="50" repeat_content="true" pos="30,-23">
+      <sprite depth="8" name="backgroundGauge" sprite="menu_empty3px" pos="-3,3" size="53,26" color="[black]" type="sliced" fillcenter="false" />
+    </grid>
+  </window>
 	<!-- end cephalopod ui -->
 
 
