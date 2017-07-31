@@ -163,7 +163,7 @@
 
 	<window name="cui_new_player" style="cui.new.player.window">
 		<rect>
-			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="450" />
+			<!-- <sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="450" /> -->
 			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="450" />
 
 			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="52,52" pos="0,0" />
@@ -216,6 +216,33 @@
 			<label depth="5" text="{statcurrent}%" effect="outline" pos="155,0" />
 		</rect>
   </window>
+
+	<window name="cui_new_stats" style="cui.new.stats.window">
+		<rect>
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,0" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-26" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-52" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-78" />
+		</rect>
+		<rect size="100,26" pos="0,0">
+			<sprite depth="3" sprite="ui_game_symbol_temperature" foregroundlayer="true" size="20,20" pos="3,-3" />
+			<label depth="5" text="{maptemperature}" color="[tan]" controller="MapStats" pos="33,0" />
+		</rect>
+		<rect size="100,26" pos="0,-26">
+			<sprite depth="3" sprite="ui_game_symbol_temperature" foregroundlayer="true" size="20,20" pos="3,-3" />
+			<label depth="5" text="{playercoretemp}" color="[tan]" controller="PlayerStatsWindow" pos="33,0" />
+		</rect>
+		<rect size="100,26" pos="0,-52">
+			<sprite depth="3" sprite="ui_game_symbol_wind" foregroundlayer="true" size="20,20" pos="3,-3" />
+			<label depth="5" text="{mapwind} MPH" color="[tan]" controller="MapStats" pos="33,0" />
+		</rect>
+		<rect size="100,26" pos="0,-78">
+			<sprite depth="3" sprite="ui_game_symbol_climb" foregroundlayer="true" size="20,20" pos="3,-3" />
+			<label depth="5" text="{mapelevation} M" color="[tan]" controller="MapStats" pos="33,0" />
+		</rect>
+	</window>
 	<!-- end cephalopod ui -->
 
 

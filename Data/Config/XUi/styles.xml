@@ -105,8 +105,16 @@
 		<style_entry name="anchor"          value="LeftTop" />
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="depth"           value="5" />
-		<style_entry name="pos"             value="10,-77" />
+		<style_entry name="pos"             value="10,-80" />
 		<style_entry name="size"            value="200,52" />
+	</style>
+
+	<style name="cui.new.stats.window" type="window">
+		<style_entry name="anchor"					value="LeftTop" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,-142" />
+		<style_entry name="size"						value="100,104" />
 	</style>
 	<!-- end cephalopod ui -->
 
