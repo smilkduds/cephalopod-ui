@@ -161,6 +161,38 @@
 		</rect>
 	</window>
 
+  <window name="cui_new_player" style="cui.new.player.window">
+    <sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="484" />
+    <rect width="51">
+      <sprite depth="1" name="background" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+      <sprite depth="1" name="levelIcon" sprite="ui_game_symbol_trophy" color="[mediumGrey_half_alpha]" size="35,35" pos="8,-8" />
+      <sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" size="45,45" />
+      <label depth="3" name="playerLevel" text="{playerlevel}" color="[tan]" justify="center" effect="outline" controller="PlayerStatsWindow" pivot="center" pos="25,-25" />
+    </rect>
+    <rect pos="51,0" width="433">
+      <sprite depth="1" name="background" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+      <!-- health -->
+      <sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="33,-3" height="17" width="397" />
+      <sprite depth="3" name="Icon" sprite="ui_game_symbol_add" size="20,20" foregroundlayer="true" pos="5,-3" />
+      <rect controller="HUDStatBar" stat_type="Health" visible="{statvisible}" pos="30,0" >
+        <sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_health]" type="filled" fillcenter="true" fill="{playerhealthfill}" controller="PlayerStatsWindow" height="20" width="400" />
+        <label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" effect="outline" pos="408,5" />
+      </rect>
+      <grid depth="8" rows="1" cols="10" cell_height="20" cell_width="40" repeat_content="true" pos="30,0">
+        <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="43" height="23" color="[black]" type="sliced" fillcenter="false" />
+      </grid>
+      <!-- stamina -->
+      <sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="33,-31" height="17" width="397" />
+      <sprite depth="3" name="Icon" sprite="ui_game_symbol_run" size="20,20" foregroundlayer="true" pos="5,-28" />
+      <rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" pos="30,-31">
+        <sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_stamina]" type="filled" fillcenter="true" fill="{playerstaminafill}" controller="PlayerStatsWindow" height="20" width="400" />
+        <label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" effect="outline" pos="408,5" />
+      </rect>
+      <grid depth="8" rows="1" cols="10" cell_height="20" cell_width="40" repeat_content="true" pos="30,-28">
+        <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="43" height="23" color="[black]" type="sliced" fillcenter="false" />
+      </grid>
+    </rect>
+  </window>
 	<!-- end cephalopod ui -->
 
 
