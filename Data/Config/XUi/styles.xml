@@ -104,10 +104,9 @@
   <style name="cui.new.wellness.window" type="window">
 		<style_entry name="anchor"          value="LeftTop" />
 		<style_entry name="backgroundcolor" value="[black]" />
-		<style_entry name="cursor_area"     value="false" />
 		<style_entry name="depth"           value="5" />
-		<style_entry name="pos"             value="10,-71" />
-		<style_entry name="size"            value="300,49" />
+		<style_entry name="pos"             value="10,-77" />
+		<style_entry name="size"            value="200,52" />
 	</style>
 	<!-- end cephalopod ui -->
 
