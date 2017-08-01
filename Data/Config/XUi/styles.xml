@@ -8,30 +8,6 @@
 		<style_entry name="pos" 						value="-313,90" />
 		<style_entry name="size" 						value="603,80" />
 	</style>
-	<style name="cui.toolbelt.player.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-313,132" />
-		<style_entry name="size" 						value="603,55" />
-	</style>
-	<style name="cui.toolbelt.left.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-380,132" />
-		<style_entry name="size" 						value="69,135" />
-	</style>
-	<style name="cui.toolbelt.right.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="288,132" />
-		<style_entry name="size" 						value="91,135" />
-	</style>
 	<style name="cui.compass.window" type="window">
 		<style_entry name="anchor" 					value="CenterTop" />
 		<style_entry name="pos" 						value="-200,-9" />
@@ -98,15 +74,15 @@
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
 		<style_entry name="pos"							value="10,-10" />
-		<style_entry name="size"						value="500,60" />
+		<style_entry name="size"						value="300,60" />
 	</style>
 
   <style name="cui.new.wellness.window" type="window">
-		<style_entry name="anchor"          value="LeftTop" />
-		<style_entry name="backgroundcolor" value="[black]" />
-		<style_entry name="depth"           value="5" />
-		<style_entry name="pos"             value="10,-80" />
-		<style_entry name="size"            value="200,52" />
+		<style_entry name="anchor"					value="LeftTop" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,-80" />
+		<style_entry name="size"						value="200,52" />
 	</style>
 
 	<style name="cui.new.stats.window" type="window">

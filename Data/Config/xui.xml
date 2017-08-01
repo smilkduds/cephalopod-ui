@@ -248,7 +248,8 @@
 		</window_group>
 
 		<window_group name="ingameMenu">
-			<window name="ingameMenu" />
+			<!-- <window name="ingameMenu" /> -->
+			<window name="cui_ingameMenu" />
 		</window_group>
 
 		<window_group name="woPropsSleeperVolume">

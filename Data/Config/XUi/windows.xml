@@ -76,34 +76,34 @@
 
 	<window name="cui_new_player" style="cui.new.player.window">
 		<rect>
-			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="450" />
-			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" width="450" />
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
 
 			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="52,52" pos="0,0" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="368,26" pos="82,0" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="368,26" pos="82,-26" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="450,11" pos="0,-49" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="218,26" pos="82,0" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="218,26" pos="82,-26" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="300,11" pos="0,-49" />
 
 			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="52,52" pos="0,0" />
-			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="368,26" pos="82,0" />
-			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="368,26" pos="82,-26" />
-			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="450,11" pos="0,-49" />
+			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="218,26" pos="82,0" />
+			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="218,26" pos="82,-26" />
+			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="300,11" pos="0,-49" />
 		</rect>
 		<rect size="52,52" pos="0,0">
 			<sprite depth="3" name="icon" sprite="ui_game_symbol_trophy" color="[cui_alpha]" pivot="center" size="42,42" pos="26,-26" />
 			<label depth="5" name="playerLvl" text="{playerlevel}" color="[tan]" justify="center" effect="outline" controller="PlayerStatsWindow" pivot="center" pos="26,-26" />
 		</rect>
-		<rect controller="HUDStatBar" stat_type="Health" visible="{statvisible}" size="398,26" pos="52,0">
+		<rect controller="HUDStatBar" stat_type="Health" visible="{statvisible}" size="248,26" pos="52,0">
 			<sprite depth="3" name="statIcon" sprite="ui_game_symbol_add" foregroundlayer="true" size="20,20" pos="5,-3" />
-			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_health]" type="filled" fillcenter="true" fill="{playerhealthfill}" controller="PlayerStatsWindow" size="368,26" pos="30,0" />
+			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_health]" type="filled" fillcenter="true" fill="{playerhealthfill}" controller="PlayerStatsWindow" size="218,26" pos="30,0" />
 			<label depth="5" name="TextContent" text="{statcurrentwithmax}" effect="outline" justify="right" pos="-5,0"/>
 		</rect>
-		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" size="398,26" pos="52,-26">
+		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" size="248,26" pos="52,-26">
 			<sprite depth="3" name="statIcon" sprite="ui_game_symbol_run" foregroundlayer="true" size="20,20" pos="5,-3" />
-			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_stamina]" type="filled" fillcenter="true" fill="{playerstaminafill}" controller="PlayerStatsWindow" size="368,26" pos="30,0" />
+			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_stamina]" type="filled" fillcenter="true" fill="{playerstaminafill}" controller="PlayerStatsWindow" size="218,26" pos="30,0" />
 			<label depth="5" name="TextContent" text="{statcurrentwithmax}" effect="outline" justify="right" pos="-5,0" />
 		</rect>
-		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" size="450,8" pos="0,-51">
+		<rect controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}" size="300,8" pos="0,-51">
 			<sprite depth="4" sprite="menu_empty3px" color="[cui_experience]" type="filled" fillcenter="true" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
 		</rect>
 	</window>
@@ -155,6 +155,16 @@
 			<sprite depth="3" sprite="ui_game_symbol_climb" foregroundlayer="true" size="20,20" pos="3,-3" />
 			<label depth="5" text="{mapelevation} M" color="[tan]" controller="MapStats" pos="33,0" />
 		</rect>
+	</window>
+
+	<window name="cui_ingameMenu" anchor="CenterCenter" pos="-125,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true">
+		<label name="cephalopod" depth="0" size="250,50" pos="0,75" text="CEPHALOPOD Menu" font_size="35" justify="center" effect="outline" color="[tan]" upper_case="false" />
+		<label name="cephalopod" depth="1" size="250,50" pos="0,-250" text="https://github.com/smilkduds/cephalopod-ui" justify="center" effect="outline" color="[tan]" upper_case="false" />
+		<grid name="buttons" pos="0, -0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
+			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
+			<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
+			<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
+		</grid>
 	</window>
 	<!-- end cephalopod ui -->
 
