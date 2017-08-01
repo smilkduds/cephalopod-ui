@@ -5,32 +5,8 @@
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="cursor_area" 		value="true" />
 		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-313,80" />
+		<style_entry name="pos" 						value="-313,90" />
 		<style_entry name="size" 						value="603,80" />
-	</style>
-	<style name="cui.toolbelt.player.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-313,132" />
-		<style_entry name="size" 						value="603,55" />
-	</style>
-	<style name="cui.toolbelt.left.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-380,132" />
-		<style_entry name="size" 						value="69,135" />
-	</style>
-	<style name="cui.toolbelt.right.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="cursor_area" 		value="true" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="288,132" />
-		<style_entry name="size" 						value="91,135" />
 	</style>
 	<style name="cui.compass.window" type="window">
 		<style_entry name="anchor" 					value="CenterTop" />
@@ -89,8 +65,32 @@
 		<style_entry name="anchor" 					value="CenterBottom" />
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-313,80" />
+		<style_entry name="pos" 						value="-313,90" />
 		<style_entry name="size" 						value="603,80" />
+	</style>
+
+	<style name="cui.new.player.window" type="window">
+		<style_entry name="anchor"					value="LeftTop" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,-10" />
+		<style_entry name="size"						value="300,60" />
+	</style>
+
+  <style name="cui.new.wellness.window" type="window">
+		<style_entry name="anchor"					value="LeftTop" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,-80" />
+		<style_entry name="size"						value="200,52" />
+	</style>
+
+	<style name="cui.new.stats.window" type="window">
+		<style_entry name="anchor"					value="LeftTop" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,-142" />
+		<style_entry name="size"						value="100,104" />
 	</style>
 	<!-- end cephalopod ui -->
 
@@ -131,11 +131,13 @@
 		<style_entry name="disabledLabelColor"				value="160,160,160" />
 
 		<!-- cephalopod ui colors -->
+		<style_entry name="cui_alpha"				value="96,96,96,64"     />
 		<style_entry name="cui_health"			value="153,0,0,191"     />
 		<style_entry name="cui_stamina"			value="0,102,0,191"     />
 		<style_entry name="cui_food"				value="153,102,51,191"  />
 		<style_entry name="cui_water"				value="51,51,153,191"   />
-		<style_entry name="cui_experience"	value="51,204,51,191"   />
+		<!-- <style_entry name="cui_experience"	value="51,204,51,191"   /> -->
+		<style_entry name="cui_experience"	value="204,204,0,191"   />
 		<style_entry name="cui_veh_health"  value="102,153,153,191" />
 		<style_entry name="cui_veh_fuel"		value="255,153,51,191"  />
 		<!-- end cephalopod ui colors -->
