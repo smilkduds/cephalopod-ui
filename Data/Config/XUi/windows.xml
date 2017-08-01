@@ -158,7 +158,7 @@
 	</window>
 
 	<window name="cui_ingameMenu" anchor="CenterCenter" pos="-125,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true">
-		<label name="cephalopod" depth="0" size="250,50" pos="0,75" text="CEPHALOPOD Menu" font_size="35" justify="center" effect="outline" color="[tan]" upper_case="false" />
+		<label name="cephalopod" depth="0" size="250,50" pos="0,75" text="CEPHALOPOD UI" font_size="35" justify="center" effect="outline" color="[tan]" upper_case="false" />
 		<label name="cephalopod" depth="1" size="250,50" pos="0,-250" text="https://github.com/smilkduds/cephalopod-ui" justify="center" effect="outline" color="[tan]" upper_case="false" />
 		<grid name="buttons" pos="0, -0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
 			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
