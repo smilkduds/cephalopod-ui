@@ -117,9 +117,6 @@
 			<!-- <window name="HUDRightStatBars" anchor="RightBottom" /> -->
 			<window name="windowQuestTracker" anchor="RightTop" />
 			<window name="cui_toolbelt_items" />
-			<!-- <window name="cui_toolbelt_player" /> -->
-			<!-- <window name="cui_toolbelt_left" /> -->
-			<!-- <window name="cui_toolbelt_right" /> -->
 			<window name="cui_new_player" />
 			<window name="cui_new_wellness" />
 			<window name="cui_new_stats" />
