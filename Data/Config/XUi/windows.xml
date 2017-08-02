@@ -170,6 +170,15 @@
 			<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
 		</grid>
 	</window>
+
+	<window name="cui_new_ammo" style="cui.new.ammo.window">
+		<rect controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="true" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="false" />
+			<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="5,-5" color="{staticoncolor}" foregroundlayer="true" />
+			<label depth="4" name="TextContent" effect="outline" text="{statcurrentwithmax}" pos="46,-5" />
+		</rect>
+	</window>
 	<!-- end cephalopod ui -->
 
 

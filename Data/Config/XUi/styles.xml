@@ -100,6 +100,14 @@
 		<style_entry name="pos"							value="10,-142" />
 		<style_entry name="size"						value="100,104" />
 	</style>
+
+	<style name="cui.new.ammo.window" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-313,132" />
+		<style_entry name="size"						value="150,42" />
+	</style>
 	<!-- end cephalopod ui -->
 
 	<global>

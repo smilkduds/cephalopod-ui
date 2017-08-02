@@ -126,6 +126,7 @@
 			<window name="cui_collected_items" />
 			<window name="cui_buffs_popout" />
 			<window name="cui_vehicle" />
+			<window name="cui_new_ammo" />
 		</window_group>
 		<!-- end cephalopod ui -->
 
