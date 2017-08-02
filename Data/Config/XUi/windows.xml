@@ -53,24 +53,28 @@
 
 	<window name="cui_vehicle" style="cui.vehicle.window">
 		<rect controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}">
-			<sprite depth="1" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
-			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="3,-3" height="75" width="250" />
-			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="256,-3" height="75" width="91" />
-			<sprite depth="2" name="background" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" pos="350,-3" height="75" width="250" />
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
+
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="256,80" pos="0,0" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="91,80" pos="256,0" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="256,80" pos="347,0" />
+
+			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="256,80" pos="0,0" />
+			<sprite depth="2" name="backgroundFrame" sprite="menu_empty3px" color="[darkGrey_half_alpha]" type="sliced" fillcenter="true" size="256,80" pos="347,0" />
 		</rect>
-		<rect controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}" pos="3,-3" height="75" width="250">
-			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_veh_health]" type="filled" fillcenter="true" fill="{vehiclehealthfill}" controller="VehicleStatsWindow" />
-			<sprite depth="4" name="Icon" sprite="ui_game_symbol_minibike" size="32,32" foregroundlayer="true" pos="5,-5" />
-			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="left" pivot="topLeft" pos="42,-5" height="30" width="208" />
+		<rect controller="HUDStatBar" stat_type="VehicleHealth" visible="{statvisible}" size="250,74" pos="3,-3">
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_minibike" foregroundlayer="true" size="32,32" pos="8,-8" />
+			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_veh_health]" type="filled" fillcenter="true" fill="{vehiclehealthfill}" controller="VehicleStatsWindow" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" effect="outline" pos="8,-43" />
 		</rect>
-		<rect controller="HUDStatBar" stat_type="VehicleBattery" visible="{statvisible}" pos="256,-3" height="75" width="91">
-			<sprite depth="4" name="Icon" sprite="ui_game_symbol_battery" size="32,32" foregroundlayer="true" pos="30,-5" />
-			<label depth="5" name="TextContent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="center" pos="0,-40" height="30" />
+		<rect controller="HUDStatBar" stat_type="VehicleBattery" visible="{statvisible}" size="85,74" pos="259,-3">
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_battery" foregroundlayer="true" size="32,32" pos="26,-8" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" effect="outline" justify="center" pos="0,-43" />
 		</rect>
-		<rect controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}" pos="350,-3" height="75" width="250">
-			<sprite depth="3" name="BarContent" sprite="menu_empty3px" color="[cui_veh_fuel]" type="filled" fillcenter="true" fill="{vehiclefuelfill}" controller="VehicleStatsWindow" rotation="180" pos="250,-75" />
-			<sprite depth="4" name="Icon" sprite="ui_game_symbol_gas" size="32,32" foregroundlayer="true" pos="213,-5" />
-			<label depth="5" name="TextConent" text="{statcurrentwithmax}" font_size="28" color="[white]" justify="right" pivot="topLeft" pos="0,-5" height="30" width="208" />
+		<rect controller="HUDStatBar" stat_type="VehicleFuel" visible="{statvisible}" size="250,74" pos="350,-3">
+			<sprite depth="3" name="Icon" sprite="ui_game_symbol_gas" foregroundlayer="true" size="32,32" pos="210,-8" />
+			<sprite depth="4" name="BarContent" sprite="menu_empty3px" color="[cui_veh_fuel]" type="filled" fillcenter="true" fill="{vehiclefuelfill}" controller="VehicleStatsWindow" rotation="180" pos="250,-74" />
+			<label depth="5" name="TextConent" text="{statcurrentwithmax}" effect="outline" justify="right" size="242,74" pos="0,-43" />
 		</rect>
 	</window>
 
@@ -165,6 +169,15 @@
 			<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
 			<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
 		</grid>
+	</window>
+
+	<window name="cui_new_ammo" style="cui.new.ammo.window">
+		<rect controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="true" />
+			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="false" />
+			<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="5,-5" color="{staticoncolor}" foregroundlayer="true" />
+			<label depth="4" name="TextContent" effect="outline" text="{statcurrentwithmax}" pos="46,-5" />
+		</rect>
 	</window>
 	<!-- end cephalopod ui -->
 
