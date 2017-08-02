@@ -247,10 +247,12 @@
 			<window name="spawnMenu" />
 		</window_group>
 
+		<!-- cephalopod ui -->
 		<window_group name="ingameMenu">
 			<!-- <window name="ingameMenu" /> -->
 			<window name="cui_ingameMenu" />
 		</window_group>
+		<!-- end cephalopod ui -->
 
 		<window_group name="woPropsSleeperVolume">
 			<window name="woPropsSleeperVolume" />
