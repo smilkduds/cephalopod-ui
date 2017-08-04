@@ -805,7 +805,7 @@
 
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 87" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true">
-	<!-- #$-IGS END.-$# -->
+	<!--#$-IGS END.-$#-->
 
 		<rect>
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
@@ -2761,6 +2761,7 @@
 				<togglebutton name="toggleDecorations" caption_key="xuiDebugMenuDecorations" width="290" height="32" depth="3" />
 				<togglebutton name="toggleEntityTasks" caption_key="xuiDebugMenuEntityTasks" width="290" height="32" depth="3" />
 				<togglebutton name="toggleLightPerformance" caption_key="xuiDebugMenuShowLightPerf" width="290" height="32" depth="3" />
+				<togglebutton name="toggleStabilityGlue" caption_key="xuiDebugMenuShowStabilityGlue" width="290" height="32" depth="3" />
 			</grid>
 
 		</panel>
