@@ -1,7 +1,7 @@
 # cephalopod-ui
 UI modifications for 7 Days to Die.
 
-Version: 2.1
+Version: 2.2
 
 The stock UI for 7 Days to Die is simple, with a lot of data relevant to the
 player visible only behind menu screens. The goal of Cephalopod is to bring some
@@ -16,11 +16,11 @@ better view of their heading.
 * Days survived and current time - moved to under the compass and spread out,
 also the color is changed to better stand out.
 * Player information - current level, health, stamina and xp progression bar are
-added to the upper left of the window.
+redesigned in the bottom left of the window.
 * Food and Water - got thirst? Now you can see at a quick glance where you stand
 on your dietary needs. Remember a hungry survivor, is a dead survivor.
 * Climate information - current air temperature, player core temperature, wind
-speed, and elevation are positioned on the left side of the window.
+speed, and elevation are positioned on the lower left side of the window.
 * Current item ammo - moving this element from the lower right corner to a more
 centered position. So you can more easily tell if you have just run out of ammo
 and should pull a Shane on Otis or make a stand worthy of the Alamo.

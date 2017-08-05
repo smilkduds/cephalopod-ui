@@ -65,7 +65,8 @@
 		<style_entry name="anchor" 					value="LeftBottom" />
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="10,53" />
+		<!-- <style_entry name="pos" 						value="10,53" /> -->
+		<style_entry name="pos" 						value="10,299" />
 		<style_entry name="size" 						value="168,43" />
 	</style>
 
@@ -78,26 +79,32 @@
 	</style>
 
 	<style name="cui.new.player.window" type="window">
-		<style_entry name="anchor"					value="LeftTop" />
+		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
+		<style_entry name="anchor"					value="LeftBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="10,-10" />
+		<!-- <style_entry name="pos"							value="10,-10" /> -->
+		<style_entry name="pos"							value="10,70" />
 		<style_entry name="size"						value="300,60" />
 	</style>
 
   <style name="cui.new.wellness.window" type="window">
-		<style_entry name="anchor"					value="LeftTop" />
+		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
+		<style_entry name="anchor"					value="LeftBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="10,-80" />
+		<!-- <style_entry name="pos"							value="10,-80" /> -->
+		<style_entry name="pos"							value="10,132" />
 		<style_entry name="size"						value="200,52" />
 	</style>
 
 	<style name="cui.new.stats.window" type="window">
-		<style_entry name="anchor"					value="LeftTop" />
+		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
+		<style_entry name="anchor"					value="LeftBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="10,-142" />
+		<!-- <style_entry name="pos"							value="10,-142" /> -->
+		<style_entry name="pos"							value="10,246" />
 		<style_entry name="size"						value="100,104" />
 	</style>
 
@@ -105,7 +112,8 @@
 		<style_entry name="anchor"					value="CenterBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-313,132" />
+		<!-- <style_entry name="pos"							value="-313,132" /> -->
+		<style_entry name="pos"							value="-473,52" />
 		<style_entry name="size"						value="150,42" />
 	</style>
 	<!-- end cephalopod ui -->

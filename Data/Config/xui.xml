@@ -1,6 +1,5 @@
 <xui>
 	<ruleset name="default" scale="1.255" stackpanel_scale="1.05">
-	<!-- <ruleset name="default" scale="1.000" stackpanel_scale="1.00"> -->
 
 		<window_group name="crafting" controller="XUiC_CraftingWindowGroup">
 			<window name="windowCraftingList"/>
@@ -86,10 +85,6 @@
 		<window_group name="compass" actionSet="false">
 			<!-- <window name="windowCompass" /> -->
 			<window name="cui_compass" />
-
-			<!-- <window name="cui_new_player" /> -->
-      <!-- <window name="cui_new_wellness" /> -->
-			<!-- <window name="cui_new_stats" /> -->
 		</window_group>
 		<!-- end cephalopod ui -->
 
