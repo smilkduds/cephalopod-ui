@@ -50,13 +50,13 @@
 		<style_entry name="fillcenter"			value="false" />
 	</style>
 	<style name="cui.icon.sprite" type="sprite">
-		<style_entry name="name"									value="Icon" />
-		<style_entry name="atlas"									value="ItemIconAtlas" />
-		<style_entry name="foregroundlayer"				value="true" />
+		<style_entry name="name"						value="Icon" />
+		<style_entry name="atlas"						value="ItemIconAtlas" />
+		<style_entry name="foregroundlayer"	value="true" />
 	</style>
 	<style name="cui.text.label" type="label">
-		<style_entry name="name"									value="TextContent" />
-		<style_entry name="effect"								value="outline" />
+		<style_entry name="name"						value="TextContent" />
+		<style_entry name="effect"					value="outline" />
 	</style>
 
 

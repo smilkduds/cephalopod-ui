@@ -26,18 +26,17 @@
 		</sprite>
 		<texture style="cui.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
-
-		<!-- date -->
-		<sprite style="cui.icon.sprite" sprite="cui_game_symbol_calendar" pivot="topright" size="30,30" pos="43,0" />
-		<!-- <label /> -->
-		<!-- time -->
-		<!-- <sprite /> -->
-		<!-- <label /> -->
-
-
-		<rect pos="50,-42" width="300" height="30">
-			<label depth="2" width="150" pos="0,0" text="Days: [DECEA3]{day|always}" font_size="28" effect="outline" upper_case="true" justify="left" />
-			<label depth="2" width="150" pos="155,0" text="Time: [DECEA3]{time|always}" font_size="28" effect="outline" upper_case="true" justify="right" />
+		<rect pivot="topright" pos="-55,0" size="100,43">
+			<!-- <sprite style="cui.background.sprite" /> -->
+			<!-- <sprite style="cui.icon.sprite" sprite="cui_game_symbol_calendar" pivot="bottomright" size="30,30" pos="100,-43" /> -->
+			<sprite style="cui.icon.sprite" sprite="cui_game_symbol_calendar_alt" pivot="bottomright" size="30,30" pos="100,-43" />
+			<label style="cui.text.label" text="[DECEA3]{day|always}" justify="right" pivot="bottomright" pos="67,-43" />
+		</rect>
+		<rect pivot="topleft" pos="356,0" size="100,43">
+			<!-- <sprite style="cui.background.sprite" /> -->
+			<!-- <sprite style="cui.icon.sprite" sprite="cui_game_symbol_clock" pivot="bottomleft" size="30,30" pos="0,-43"/> -->
+			<sprite style="cui.icon.sprite" sprite="cui_game_symbol_clock_alt" pivot="bottomleft" size="30,30" pos="0,-43"/>
+			<label style="cui.text.label" text="[DECEA3]{time|always}" justify="left" pivot="bottomleft" pos="33,-43" />
 		</rect>
 	</window>
 
