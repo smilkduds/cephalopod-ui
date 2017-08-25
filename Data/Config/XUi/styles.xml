@@ -151,7 +151,7 @@
 
 
 
-	
+
 	<!-- end cephalopod ui -->
 
 	<global>
@@ -163,45 +163,85 @@
 		-->
 
 		<!--NAMED COLORS-->
-		<style_entry name="limeGreen" 		value="222,255,163,255"/>
-		<style_entry name="tan" 					value="182,166,123,255"/>
-		<style_entry name="beige" 				value="222,206,163"/>
-		<style_entry name="borderColor" 	value="0,0,0"/>
-		<style_entry name="darkGrey" 		value="64,64,64"/>
-		<style_entry name="mediumGrey" 	value="96,96,96"/>
-		<style_entry name="lightGrey" 		value="128,128,128"/>
-		<style_entry name="white" 				value="255,255,255"/>
-		<style_entry name="black" 				value="0,0,0"/>
-		<style_entry name="red" 					value="255,0,0"/>
-		<style_entry name="green" 					value="0,255,0"/>
-		<style_entry name="transparent" 	value="0,0,0,0"/>
+		<style_entry name="limeGreen" 							value="222,255,163,255"/>		<!-- #deffa3 -->
+		<style_entry name="tan" 										value="182,166,123,255"/>		<!-- #b6a67b -->
+		<style_entry name="beige" 									value="222,206,163"/>				<!-- #decea3 -->
+		<style_entry name="borderColor" 						value="0,0,0"/>							<!-- #000000 -->
+		<style_entry name="darkGrey" 								value="64,64,64"/>					<!-- #404040 -->
+		<style_entry name="mediumGrey" 							value="96,96,96"/>					<!-- #606060 -->
+		<style_entry name="lightGrey" 							value="128,128,128"/>				<!-- #808080 -->
+		<style_entry name="white" 									value="255,255,255"/>				<!-- #ffffff -->
+		<style_entry name="black" 									value="0,0,0"/>							<!-- #000000 -->
+		<style_entry name="red" 										value="255,0,0"/>						<!-- #ff0000 -->
+		<style_entry name="green" 									value="0,255,0"/>						<!-- #00ff00 -->
+		<style_entry name="transparent" 						value="0,0,0,0"/>						<!-- #000000 -->
 
-		<style_entry name="white_half_alpha" 				value="255,255,255,128"/>
-		<style_entry name="mediumGrey_half_alpha" 	value="96,96,96,128"/>
-		<style_entry name="darkGrey_half_alpha" 		value="64,64,64,128"/>
-		<style_entry name="black_half_alpha" 				value="0,0,0,128"/>
+		<style_entry name="white_half_alpha" 				value="255,255,255,128"/>		<!-- #ffffff -->
+		<style_entry name="mediumGrey_half_alpha" 	value="96,96,96,128"/>			<!-- #606060 -->
+		<style_entry name="darkGrey_half_alpha" 		value="64,64,64,128"/>			<!-- #404040 -->
+		<style_entry name="black_half_alpha" 				value="0,0,0,128"/>					<!-- #000000 -->
 
-		<style_entry name="white_quarter_alpha" 			value="255,255,255,192"/>
+		<style_entry name="white_quarter_alpha" 		value="255,255,255,192"/>		<!-- #ffffff -->
 
-		<style_entry name="iconColor" 						value="255,255,255" />
-		<style_entry name="labelColor" 						value="255,255,255" />
-		<style_entry name="selectedColor" 					value="222,206,163" />
-		<style_entry name="hoverColor"						value="250,255,163" />
+		<style_entry name="iconColor" 							value="255,255,255" />			<!-- #ffffff -->
+		<style_entry name="labelColor" 							value="255,255,255" />			<!-- #ffffff -->
+		<style_entry name="selectedColor" 					value="222,206,163" />			<!-- #decea3 -->
+		<style_entry name="hoverColor"							value="250,255,163" />			<!-- #faffa3 -->
 
-		<style_entry name="disabledLabelColor"				value="160,160,160" />
+		<style_entry name="disabledLabelColor"			value="160,160,160" />			<!-- #a0a0a0 -->
 
 		<!-- cephalopod ui colors -->
-		<style_entry name="cui_alpha"				value="96,96,96,64"     />
-		<!-- <style_entry name="cui_health"			value="153,0,0,191"     /> -->
-		<!-- <style_entry name="cui_stamina"			value="0,102,0,191"     /> -->
-		<style_entry name="cui_health"			value="192,57,43,191"   />
-		<style_entry name="cui_stamina"			value="46,204,113,191"  />
-		<style_entry name="cui_food"				value="153,102,51,191"  />
-		<style_entry name="cui_drink"				value="51,51,153,191"   />
-		<!-- <style_entry name="cui_experience"	value="51,204,51,191"   /> -->
-		<style_entry name="cui_experience"	value="204,204,0,191"   />
-		<style_entry name="cui_veh_health"  value="102,153,153,191" />
-		<style_entry name="cui_veh_fuel"		value="255,153,51,191"  />
+		<style_entry name="cui_alpha"				value="96,96,96,64"     />		<!-- #606060 -->
+		<style_entry name="cui_health"			value="192,57,43,191"   />		<!-- #c0392b -->
+		<style_entry name="cui_stamina"			value="46,204,113,191"  />		<!-- #2ecc71 -->
+		<style_entry name="cui_food"				value="153,102,51,191"  />		<!-- #996633 -->
+		<style_entry name="cui_drink"				value="51,51,153,191"   />		<!-- #333399 -->
+		<style_entry name="cui_experience"	value="204,204,0,191"   />		<!-- #cccc00 -->
+		<style_entry name="cui_veh_health"  value="102,153,153,191" />		<!-- #669999 -->
+		<style_entry name="cui_veh_fuel"		value="255,153,51,191"  />		<!-- #ff9933 -->
+
+		<!-- FLAT UI COLORS -->
+		<style_entry name="Turquoise"				value="26,188,156,255" 	/>		<!-- #1abc9c -->
+		<style_entry name="GreenSea"	 			value="22,160,133,255" 	/>		<!-- #16a085 -->
+		<style_entry name="Emerald"					value="46,204,113,255" 	/>		<!-- #2ecc71 -->
+		<style_entry name="Nephritis"				value="39,174,96,255" 	/>		<!-- #27ae60 -->
+		<style_entry name="PeterRiver"			value="52,152,219,255" 	/>		<!-- #3498db -->
+		<style_entry name="Belizehole"			value="41,128,185,255" 	/>		<!-- #2980b9 -->
+		<style_entry name="Amethyst"				value="155,89,182,255" 	/>		<!-- #9b59b6 -->
+		<style_entry name="Wisteria"				value="142,68,173,255" 	/>		<!-- #8e44ad -->
+		<style_entry name="WetAsphalt"			value="52,73,94,255" 		/>		<!-- #34495e -->
+		<style_entry name="MidnightBlue"		value="44,62,80,255" 		/>		<!-- #2c3e50 -->
+		<style_entry name="Sunflower"				value="241,196,15,255" 	/>		<!-- #f1c40f -->
+		<style_entry name="fOrange"					value="243,156,18,255" 	/>		<!-- #f39c12 -->
+		<style_entry name="Carrot"					value="230,126,34,255" 	/>		<!-- #e67e22 -->
+		<style_entry name="Pumpkin"					value="211,84,0,255" 		/>		<!-- #d35400 -->
+		<style_entry name="Alizarin"				value="231,76,60,255" 	/>		<!-- #e74c3c -->
+		<style_entry name="Pomegranate"			value="192,57,43,255" 	/>		<!-- #c0392b -->
+		<style_entry name="Clouds"					value="236,240,241,255" />		<!-- #ecf0f1 -->
+		<style_entry name="Silver"					value="189,195,199,255" />		<!-- #bdc3c7 -->
+		<style_entry name="Concrete"				value="149,165,166,255" />		<!-- #95a5a6 -->
+		<style_entry name="Asbestos"				value="127,140,141,255" />		<!-- #7f8c8d -->
+
+		<!-- MATERIAL UI COLORS -->
+		<style_entry name="Red"							value="244,67,54,255"		/>		<!-- #f44336 -->
+		<style_entry name="Pink"						value="233,30,99,255" 	/>		<!-- #e91e63 -->
+		<style_entry name="Purple"					value="156,39,176,255"	/>		<!-- #9c27b0 -->
+		<style_entry name="DeepPurple"			value="103,58,183,255"	/>		<!-- #673ab7 -->
+		<style_entry name="Indigo"					value="63,81,181,255"		/>		<!-- #3f51b5 -->
+		<style_entry name="Blue"						value="33,150,243,255"	/>		<!-- #2196f3 -->
+		<style_entry name="LightBlue"				value="3,169,244,255"		/>		<!-- #03a9f4 -->
+		<style_entry name="Cyan"						value="0,188,212,255"		/>		<!-- #00bcd4 -->
+		<style_entry name="Teal"						value="0,150,136,255"		/>		<!-- #009688 -->
+		<style_entry name="Green"						value="76,175,80,255"		/>		<!-- #4caf50 -->
+		<style_entry name="LightGreen"			value="139,195,74,255"	/>		<!-- #8bc34a -->
+		<style_entry name="Lime"						value="205,220,57,255"	/>		<!-- #cddc39 -->
+		<style_entry name="Yellow"					value="255,235,59,255"	/>		<!-- #ffeb3b -->
+		<style_entry name="Amber"						value="255,193,7,255"		/>		<!-- #ffc107 -->
+		<style_entry name="mOrange"					value="255,152,0,255"		/>		<!-- #ff9800 -->
+		<style_entry name="DeepOrange"			value="255,87,34,255"		/>		<!-- #ff5722 -->
+		<style_entry name="Brown"						value="121,85,72,255"		/>		<!-- #795548 -->
+		<style_entry name="Grey"						value="158,158,158,255"	/>		<!-- #9e9e9e -->
+		<style_entry name="BlueGrey"				value="96,125,139,255"	/>		<!-- #607d8b -->
 		<!-- end cephalopod ui colors -->
 
 		<!--NAMED SPRITES-->

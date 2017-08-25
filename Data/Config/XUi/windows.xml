@@ -109,6 +109,58 @@
 
 
 
+	<!-- COLOR TEST -->
+	<window name="cui_color_test" anchor="CenterCenter" pivot="top" pos="0,200" size="300,400">
+		<rect name="uiFlat" pivot="topleft" pos="-150,0" size="100,400">
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,0"			color="[Turquoise]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-20"		color="[GreenSea]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-40"		color="[Emerald]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-60"		color="[Nephritis]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-80"		color="[PeterRiver]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-100"	color="[Belizehole]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-120"	color="[Amethyst]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-140"	color="[Wisteria]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-160"	color="[WetAsphalt]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-180"	color="[MidnightBlue]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-200"	color="[Sunflower]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-220"	color="[fOrange]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-240"	color="[Carrot]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-260"	color="[Pumpkin]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[Alizarin]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-300"	color="[Pomegranate]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-320"	color="[Clouds]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-340"	color="[Silver]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-360"	color="[Concrete]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-380"	color="[Asbestos]" />
+		</rect>
+
+		<rect name="uiMaterial" pivot="topright" pos="150,0" size="100,400">
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,0"			color="[Red]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-20"		color="[Pink]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-40"		color="[Purple]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-60"		color="[DeepPurple]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-80"		color="[Indigo]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-100"	color="[Blue]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-120"	color="[LightBlue]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-140"	color="[Cyan]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-160"	color="[Teal]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-180"	color="[Green]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-200"	color="[LightGreen]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-220"	color="[Lime]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-240"	color="[Yellow]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-260"	color="[Amber]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[morange]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-300"	color="[DeepOrange]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-320"	color="[Brown]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-340"	color="[Grey]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-360"	color="[BlueGrey]" />
+		</rect>
+	</window>
+
+
+
+
+
 	<window name="cui_collected_items" style="cui.collected.items.window">
 		<rect name="hud" pos="-90,61" side="right" controller="CollectedItemList" pivot="BottomLeft">
 			<panel width="228" height="73" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
