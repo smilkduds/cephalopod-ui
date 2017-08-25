@@ -92,15 +92,12 @@
 		<style_entry name="size"						value="203,80" />
 	</style>
 
-
-
-
-
-
-
-
-
-
+	<style name="cui.experience.window" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="depth="					value="5" />
+		<style_entry name="pos"							value="-313,100" />
+		<style_entry name="size"						value="603,13" />
+	</style>
 
 
 
@@ -131,60 +128,6 @@
 		<style_entry name="size" 						value="603,80" />
 	</style>
 
-
-	<style name="cui.alt.player.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="depth="					value="5" />
-		<style_entry name="pos"							value="-521,85" />
-		<style_entry name="size"						value="203,80" />
-	</style>
-
-
-
-
-
-
-
-	<style name="cui.background.frame.sprite" type="sprite">
-		<style_entry name="name"									value="backgroundFrame" />
-		<style_entry name="depth"									value="8" />
-		<style_entry name="sprite"								value="menu_empty3px" />
-		<style_entry name="color"									value="[black]" />
-		<style_entry name="type"									value="sliced" />
-		<style_entry name="fillcenter"						value="false" />
-	</style>
-
-
-
-
-
-	<style name="cui.alt.experience.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="depth="					value="5" />
-		<style_entry name="pos"							value="-313,100" />
-		<style_entry name="size"						value="603,13" />
-	</style>
-
-
-	<style name="cui.alt.experience.bar.style">
-		<style_entry name="backgroundcolor"	value="[black_half_alpha]" />
-		<style_entry name="height"					value="10" />
-		<style_entry name="width"						value="600" />
-		<style_entry name="visible"					value="{statvisible}" />
-	</style>
-
-  <style name="cui.new.wellness.window" type="window">
-		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
-		<style_entry name="anchor"					value="LeftBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="depth"						value="5" />
-		<!-- <style_entry name="pos"							value="10,-80" /> -->
-		<style_entry name="pos"							value="10,132" />
-		<style_entry name="size"						value="200,52" />
-	</style>
-
 	<style name="cui.new.stats.window" type="window">
 		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
 		<style_entry name="anchor"					value="LeftBottom" />
@@ -203,6 +146,12 @@
 		<style_entry name="pos"							value="-473,52" />
 		<style_entry name="size"						value="150,42" />
 	</style>
+
+
+
+
+
+	
 	<!-- end cephalopod ui -->
 
 	<global>
