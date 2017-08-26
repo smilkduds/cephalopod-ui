@@ -48,7 +48,7 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Health">
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_health]" fill="{playerhealthfill}" size="200,38" />
+					<sprite style="cui.bar.fill.sprite" depth="3" color="[Red]" fill="{playerhealthfill}" size="200,38" />
 					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_health" pivot="center" size="30,30" pos="16,-16" />
 					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
@@ -56,7 +56,7 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Stamina">
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_stamina]" fill="{playerstaminafill}" size="200,38" />
+					<sprite style="cui.bar.fill.sprite" depth="3" color="[Green]" fill="{playerstaminafill}" size="200,38" />
 					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_stamina" pivot="center" size="30,30" pos="16,-16" />
 					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
@@ -74,7 +74,7 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Food">
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_food]" fill="{playerfoodfill}" size="200,38" pivot="bottomright" rotation="180" />
+					<sprite style="cui.bar.fill.sprite" depth="3" color="[Brown]" fill="{playerfoodfill}" size="200,38" pivot="bottomright" rotation="180" />
 					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_food" pivot="center" size="30,30" pos="181,-16" />
 					<label  style="cui.text.label" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
@@ -82,7 +82,7 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Water">
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_drink]" fill="{playerwaterfill}" size="200,38" pivot="bottomright" rotation="180" />
+					<sprite style="cui.bar.fill.sprite" depth="3" color="[Blue]" fill="{playerwaterfill}" size="200,38" pivot="bottomright" rotation="180" />
 					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_drink" pivot="center" size="30,30" pos="181,-16" />
 					<label  style="cui.text.label" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
 					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
@@ -100,18 +100,34 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Stamina" height="10" width="600">
 					<sprite style="cui.border.sprite" pos="-3,3" size="603,13" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite depth="3" atlas="ItemIconAtlas" sprite="cui_fill" color="[cui_experience]" type="filled" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
+					<sprite depth="3" atlas="ItemIconAtlas" sprite="cui_fill" color="[BlueGrey]" type="filled" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
 					<sprite style="cui.border.sprite" pos="-3,3" size="603,13" />
 					</rect>
 			</grid>
 		</panel>
 	</window>
 
+	<!-- STATS -->
+	<window name="cui_stats" style="cui.stats.window">
+		<panel style="cui.background.panel">
+			<sprite style="cui.background.sprite" />
+			<sprite style="cui.border.sprite" />
+			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="175" cell_height="38" repeat_content="false" side="left">
+				<rect style="cui.bar.rect" width="175">
+					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
+					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
+					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_thermometer" pivot="center" size="30,30" pos="16,-16" />
+					<label  style="cui.text.label" depth="5" text="{maptemperature}" justify="left" pivot="left" pos="38,-16" controller="MapStats" color="[Grey]" />
+					<label  style="cui.text.label" depth="5" text="{playercoretemp}" justify="right" pivot="left" pos="-6,-16" controller="PlayerStatsWindow" color="[Grey]" />
+				</rect>
+			</grid>
+		</panel>
+	</window>
 
 
 	<!-- COLOR TEST -->
 	<window name="cui_color_test" anchor="CenterCenter" pivot="top" pos="0,200" size="300,400">
-		<rect name="uiFlat" pivot="topleft" pos="-150,0" size="100,400">
+		<rect name="uiFlat" pivot="topright" pos="-150,0" size="100,400">
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,0"			color="[Turquoise]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-20"		color="[GreenSea]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-40"		color="[Emerald]" />
@@ -149,7 +165,7 @@
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-220"	color="[Lime]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-240"	color="[Yellow]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-260"	color="[Amber]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[morange]" />
+			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[mOrange]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-300"	color="[DeepOrange]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-320"	color="[Brown]" />
 			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-340"	color="[Grey]" />
@@ -206,65 +222,6 @@
 			<label depth="5" name="TextConent" text="{statcurrentwithmax}" effect="outline" justify="right" size="242,74" pos="0,-43" />
 		</rect>
 	</window>
-
-	<window name="cui_OLD_player" style="cui.player.window">
-		<panel name="background" depth="0" atlas="ItemIconAtlas" backgroundspritename="cui_fill" color="[black]" disableautobackground="false" >
-			<sprite depth="0" name="backgroundMain" atlas="ItemIconAtlas" sprite="cui_fill" color="[black]" type="sliced" />
-			<sprite depth="8" name="backgroundFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
-
-			<grid depth="1" rows="2" cols="1" pos="3,-3" cell_width="200" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.alt.player.bar.style" stat_type="Health">
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="203" height="41" color="[black]" type="sliced" fillcenter="false" />
-					<sprite depth="2" name="background" atlas="ItemIconAtlas" sprite="cui_fill" color="[black_half_alpha]" type="sliced" />
-					<sprite depth="3" name="BarContent" atlas="ItemIconAtlas" sprite="cui_fill" color="[cui_health]" type="filled" fill="{playerhealthfill}" controller="PlayerStatsWindow" size="200,38" />
-					<sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="cui_game_symbol_health" foregroundlayer="true" pivot="center" size="30,30" pos="16,-16" />
-					<label depth="5" name="TextContent" text="{statcurrentwithmax}" effect="outline" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="203" height="41" color="[black]" type="sliced" fillcenter="false" />
-				</rect>
-
-				<rect controller="HUDStatBar" style="cui.alt.player.bar.style" stat_type="Stamina">
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="203" height="41" color="[black]" type="sliced" fillcenter="false" />
-					<sprite depth="2" name="background" atlas="ItemIconAtlas" sprite="cui_fill" color="[black_half_alpha]" type="sliced" />
-					<sprite depth="3" name="BarContent" atlas="ItemIconAtlas" sprite="cui_fill" color="[cui_stamina]" type="filled" fill="{playerstaminafill}" controller="PlayerStatsWindow" size="200,38" />
-					<sprite depth="4" name="Icon" atlas="ItemIconAtlas" sprite="cui_game_symbol_stamina" foregroundlayer="true" pivot="center" size="30,30" pos="16,-16" />
-					<label depth="5" name="TextContent" text="{statcurrentwithmax}" effect="outline" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="203" height="41" color="[black]" type="sliced" fillcenter="false" />
-				</rect>
-			</grid>
-		</panel>
-	</window>
-
-	<window name="cui_alt_player" style="cui.alt.player.window">
-		<panel style="cui.background.panel" >
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.background.frame.sprite" />
-
-			<grid depth="1" rows="2" cols="1" pos="3,-3" cell_width="200" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.player.bar.style" stat_type="Health">
-					<sprite style="cui.background.frame.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_health]" fill="{playerhealthfill}" size="200,38" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_game_symbol_health" pivot="center" size="30,30" pos="16,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite style="cui.background.frame.sprite" pos="-3,3" size="203,41" />
-				</rect>
-
-				<rect controller="HUDStatBar" style="cui.player.bar.style" stat_type="Stamina">
-					<sprite style="cui.background.frame.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[cui_stamina]" fill="{playerstaminafill}" size="200,38" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_game_symbol_stamina" pivot="center" size="30,30" pos="16,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite style="cui.background.frame.sprite" pos="-3,3" size="203,41" />
-				</rect>
-			</grid>
-		</panel>
-	</window>
-
-
-
-
-
 
 	<window name="cui_new_stats" style="cui.new.stats.window">
 		<rect>
