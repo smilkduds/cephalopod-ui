@@ -102,10 +102,16 @@
 	<style name="cui.stats.window" type="window">
 		<style_entry name="anchor"					value="CenterBottom" />
 		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-496,131" />
+		<style_entry name="pos"							value="-496,129" />
 		<style_entry name="size"						value="178,41" />
 	</style>
 
+	<style name="cui.ammo.window" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="295,129" />
+		<style_entry name="size"						value="178,41" />
+	</style>
 
 
 
@@ -135,17 +141,7 @@
 		<style_entry name="size" 						value="603,80" />
 	</style>
 
-	<style name="cui.new.stats.window" type="window">
-		<!-- <style_entry name="anchor"					value="LeftTop" /> -->
-		<style_entry name="anchor"					value="LeftBottom" />
-		<style_entry name="backgroundcolor"	value="[black]" />
-		<style_entry name="depth"						value="5" />
-		<!-- <style_entry name="pos"							value="10,-142" /> -->
-		<style_entry name="pos"							value="10,246" />
-		<style_entry name="size"						value="100,104" />
-	</style>
-
-	<style name="cui.new.ammo.window" type="window">
+		<style name="cui.new.ammo.window" type="window">
 		<style_entry name="anchor"					value="CenterBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />

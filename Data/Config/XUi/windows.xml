@@ -124,6 +124,22 @@
 		</panel>
 	</window>
 
+	<!-- AMMO/FUEL -->
+	<window name="cui_ammo" style="cui.ammo.window">
+		<panel style="cui.background.panel">
+			<sprite style="cui.background.sprite" />
+			<sprite style="cui.border.sprite" />
+			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="175" cell_height="38" repeat_content="false" side="left">
+				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="ActiveItem" width="175">
+					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
+					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
+					<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="34,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
+					<label depth="4" name="TextContent" effect="outline" text="{statcurrentwithmax}" pos="46,-5" />
+				</rect>
+			</grid>
+		</panel>
+	</window>
+
 
 	<!-- COLOR TEST -->
 	<window name="cui_color_test" anchor="CenterCenter" pivot="top" pos="0,200" size="300,400">
@@ -223,33 +239,6 @@
 		</rect>
 	</window>
 
-	<window name="cui_new_stats" style="cui.new.stats.window">
-		<rect>
-			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="true" />
-
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,0" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-26" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-52" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" size="75,26" pos="25,-78" />
-		</rect>
-		<rect size="100,26" pos="0,0">
-			<sprite depth="3" sprite="ui_game_symbol_temperature" foregroundlayer="true" size="20,20" pos="3,-3" />
-			<label depth="5" text="{maptemperature}" color="[tan]" controller="MapStats" pos="33,0" />
-		</rect>
-		<rect size="100,26" pos="0,-26">
-			<sprite depth="3" sprite="ui_game_symbol_temperature" foregroundlayer="true" size="20,20" pos="3,-3" />
-			<label depth="5" text="{playercoretemp}" color="[tan]" controller="PlayerStatsWindow" pos="33,0" />
-		</rect>
-		<rect size="100,26" pos="0,-52">
-			<sprite depth="3" sprite="ui_game_symbol_wind" foregroundlayer="true" size="20,20" pos="3,-3" />
-			<label depth="5" text="{mapwind} MPH" color="[tan]" controller="MapStats" pos="33,0" />
-		</rect>
-		<rect size="100,26" pos="0,-78">
-			<sprite depth="3" sprite="ui_game_symbol_climb" foregroundlayer="true" size="20,20" pos="3,-3" />
-			<label depth="5" text="{mapelevation} M" color="[tan]" controller="MapStats" pos="33,0" />
-		</rect>
-	</window>
-
 	<window name="cui_ingameMenu" anchor="CenterCenter" pos="-125,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true">
 		<sprite style="cui.icon.sprite" sprite="cui_cephalopod" size="80,80" pos="125,150" color="[tan]" pivot="top" />
 		<label name="cephalopod" depth="0" size="250,50" pos="0,75" text="CEPHALOPOD UI v2.3" font_size="35" justify="center" effect="outline" color="[tan]" upper_case="false" />
@@ -261,14 +250,7 @@
 		</grid>
 	</window>
 
-	<window name="cui_new_ammo" style="cui.new.ammo.window">
-		<rect controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
-			<sprite depth="0" name="backgroundMain" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="true" />
-			<sprite depth="8" name="borderFrame" sprite="menu_empty3px" color="[black_half_alpha]" type="sliced" fillcenter="false" />
-			<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="5,-5" color="{staticoncolor}" foregroundlayer="true" />
-			<label depth="4" name="TextContent" effect="outline" text="{statcurrentwithmax}" pos="46,-5" />
-		</rect>
-	</window>
+
 	<!-- end cephalopod ui -->
 
 

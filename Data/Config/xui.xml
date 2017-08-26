@@ -116,10 +116,10 @@
 			<window name="cui_wellness" />
 			<window name="cui_experience" />
 			<window name="cui_stats" />
+			<window name="cui_ammo" />
 
 			<!-- <window name="cui_color_test" /> -->
 
-			<window name="cui_new_stats" />
 			<window name="cui_collected_items" />
 			<window name="cui_buffs_popout" />
 			<window name="cui_vehicle" />
