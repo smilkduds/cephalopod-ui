@@ -23,7 +23,7 @@
 		<sprite style="cui.background.sprite" pos="48,0" size="305,43" />
 		<sprite style="cui.border.sprite" pos="48,0" size="305,43" />
 		<sprite style="cui.background.sprite" depth="1" color="[black_half_alpha]" pos="51,-3" size="300,37">
-			<sprite depth="11" pos="150,0" pivot="top" width="3" color="[limeGreen]" type="sliced" />
+			<sprite depth="11" pos="150,0" pivot="top" width="3" color="[Lime]" type="sliced" />
 		</sprite>
 		<texture style="cui.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
@@ -116,7 +116,7 @@
 				<rect style="cui.bar.rect" width="175">
 					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_thermometer" pivot="center" size="30,30" pos="16,-16" />
+					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_thermometer" pivot="center" size="30,30" pos="16,-16" color="[Grey]" />
 					<label  style="cui.text.label" depth="5" text="{maptemperature}" justify="left" pivot="left" pos="38,-16" controller="MapStats" color="[Grey]" size="132,35" />
 					<label  style="cui.text.label" depth="5" text="{playercoretemp}" justify="right" pivot="left" pos="38,-16" controller="PlayerStatsWindow" color="[Grey]" size="132,35" />
 				</rect>
@@ -133,8 +133,8 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="ActiveItem" width="175">
 					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite depth="3" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="34,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
-					<label depth="4" name="TextContent" effect="outline" text="{statcurrentwithmax}" pos="46,-5" />
+					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="34,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
+					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="46,-16" color="[Grey]" />
 				</rect>
 			</grid>
 		</panel>
