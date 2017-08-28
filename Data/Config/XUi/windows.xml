@@ -133,7 +133,7 @@
 				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="ActiveItem" width="175">
 					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
 					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="34,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
+					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="35,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
 					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="46,-16" color="[Grey]" />
 				</rect>
 			</grid>
@@ -173,6 +173,17 @@
 		</panel>
 	</window>
 
+	<!-- INGAME MENU -->
+	<window name="cui_ingameMenu" anchor="CenterCenter" pos="0,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true" pivot="center">
+		<sprite name="cephalopod" depth="1"  style="cui.icon.sprite" sprite="cui_cephalopod" size="80,80" pos="0,150" color="[BlueGrey]" pivot="top" />
+		<label  name="cephalopod" depth="10" style="cui.text.label"  text="CEPHALOPOD UI v2.3" size="250,50" pos="0,80"  font_size="35" justify="center" color="[BlueGrey]" upper_case="false" pivot="center" />
+		<label  name="cephalopod" depth="10" style="cui.text.label"  text="https://github.com/smilkduds/cephalopod-ui" size="300,50" pos="0,55"  justify="center" color="[Grey]" upper_case="false" pivot="center" />
+		<grid name="buttons" pos="-125,0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
+			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
+			<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
+			<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
+		</grid>
+	</window>
 
 	<!-- COLOR TEST -->
 	<window name="cui_color_test" anchor="CenterCenter" pivot="top" pos="0,200" size="300,400">
@@ -222,20 +233,20 @@
 		</rect>
 	</window>
 
-
-
-
-
-	<window name="cui_collected_items" style="cui.collected.items.window">
-		<rect name="hud" pos="-90,61" side="right" controller="CollectedItemList" pivot="BottomLeft">
-			<panel width="228" height="73" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
-				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="73" width="222" pivot="center" />
-				<sprite depth="4" name="Icon" atlas="ItemIconAtlas" pos="50,0" size="56,48" pivot="center" foregroundlayer="true" />
-				<label depth="6" name="TextContent" font_size="32" color="[white]" justify="center" height="30" pivot="center" />
-				<sprite depth="6" name="Negative" sprite="ui_game_symbol_x" color="[red]" pos="0,16" width="32" height="32" />
+	<!-- COLLECTED ITEMS -->
+	<window name="cui_collected" style="cui.collected.window">
+		<rect name="hud" controller="CollectedItemList" side="right" pivot="bottomright" >
+			<panel name="item" visible="false" pivot="right" disableautobackground="true">
+				<sprite style="cui.background.sprite" pivot="bottomright" />
+				<sprite style="cui.border.sprite" pivot="bottomright" />
+				<sprite style="cui.icon.sprite" depth="4" pivot="right" pos="-10,38" size="58,50" />
+				<label  style="cui.text.label" depth="5" font_size="32" justify="right" pivot="right" pos="-78,38" color="[Grey]" />
+				<sprite style="cui.icon.sprite" name="Negative" sprite="cui_x" depth="6" pivot="right" pos="-36,47" size="32,32" color="[Red]" />
 			</panel>
 		</rect>
 	</window>
+
+
 
 	<window name="cui_buffs_popout" style="cui.buffs.popout.window" controller="BuffPopoutList">
 		<panel name="item" visible="false" disableautobackground="true">
@@ -245,16 +256,7 @@
 		</panel>
 	</window>
 
-	<window name="cui_ingameMenu" anchor="CenterCenter" pos="0,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true" pivot="center">
-		<sprite name="cephalopod" depth="1"  style="cui.icon.sprite" sprite="cui_cephalopod" size="80,80" pos="0,150" color="[BlueGrey]" pivot="top" />
-		<label  name="cephalopod" depth="10" style="cui.text.label"  text="CEPHALOPOD UI v2.3" size="250,50" pos="0,80"  font_size="35" justify="center" color="[Grey]" upper_case="false" pivot="center" />
-		<label  name="cephalopod" depth="10" style="cui.text.label"  text="https://github.com/smilkduds/cephalopod-ui" size="300,50" pos="0,55"  justify="center" color="[Grey]" upper_case="false" pivot="center" />
-		<grid name="buttons" pos="-125,0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
-			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
-			<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
-			<simplebutton name="btnExit" depth="3" width="250" height="46" caption_key="xuiMenuExit" font_size="40" />
-		</grid>
-	</window>
+
 
 
 	<!-- end cephalopod ui -->

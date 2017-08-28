@@ -115,24 +115,20 @@
 
 	<style name="cui.vehicle.window" type="window">
 		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="depth" 					value="5" />
 		<style_entry name="pos" 						value="-313,85" />
 		<style_entry name="size" 						value="603,80" />
 	</style>
 
-
-
-
-
-
-	<style name="cui.collected.items.window" type="window">
-		<style_entry name="anchor" 					value="RightBottom" />
-		<style_entry name="backgroundcolor" value="[black]" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-30,-15" />
-		<style_entry name="size" 						value="228,73" />
+	<style name="cui.collected.window" type="window">
+		<style_entry name="anchor"					value="RightBottom" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-10,10" />
+		<style_entry name="size"						value="175,75" />
 	</style>
+
+
+
 
 	<style name="cui.buffs.popout.window" type="window">
 		<style_entry name="anchor" 					value="LeftBottom" />
@@ -142,13 +138,6 @@
 		<style_entry name="pos" 						value="10,50" />
 		<style_entry name="size" 						value="168,43" />
 	</style>
-
-
-
-
-
-
-
 	<!-- end cephalopod ui -->
 
 	<global>
