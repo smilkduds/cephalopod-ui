@@ -127,6 +127,12 @@
 		<style_entry name="size"						value="175,75" />
 	</style>
 
+	<style name="cui.buffs.window" type="window">
+		<style_entry name="anchor"					value="LeftBottom" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,10" />
+		<style_entry name="size"						value="175,75" />
+	</style>
 
 
 

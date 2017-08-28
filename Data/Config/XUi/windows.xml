@@ -235,7 +235,7 @@
 
 	<!-- COLLECTED ITEMS -->
 	<window name="cui_collected" style="cui.collected.window">
-		<rect name="hud" controller="CollectedItemList" side="right" pivot="bottomright" >
+		<rect name="hud" controller="CollectedItemList" side="right" pivot="bottomright">
 			<panel name="item" visible="false" pivot="right" disableautobackground="true">
 				<sprite style="cui.background.sprite" pivot="bottomright" />
 				<sprite style="cui.border.sprite" pivot="bottomright" />
@@ -246,7 +246,18 @@
 		</rect>
 	</window>
 
-
+	<!-- PLAYER BUFFS -->
+	<window name="cui_buffs" style="cui.buffs.window">
+		<rect name="hud" controller="BuffPopoutList" side="left" pivot="bottomleft">
+			<panel name="item" visible="false" pivot="left" disableautobackground="true">
+				<sprite style="cui.background.sprite" pivot="bottomleft" />
+				<sprite style="cui.border.sprite" pivot="bottomleft" />
+				<!-- <sprite style="cui.icon.sprite" atlas="UIAtlas" depth="4" pivot="left" pos="10,38" size="58,50" /> -->
+				<sprite depth="4" name="Icon" size="58,50" pos="10,38" pivot="left" />
+				<label  style="cui.text.label" depth="5" font_size="32" justify="left" pivot="left" pos="78,38" color="[Grey]" />
+			</panel>
+		</rect>
+	</window>
 
 	<window name="cui_buffs_popout" style="cui.buffs.popout.window" controller="BuffPopoutList">
 		<panel name="item" visible="false" disableautobackground="true">
