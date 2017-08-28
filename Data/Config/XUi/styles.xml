@@ -130,7 +130,7 @@
 		<style_entry name="anchor" 					value="RightBottom" />
 		<style_entry name="backgroundcolor" value="[black]" />
 		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-30,-60" />
+		<style_entry name="pos" 						value="-30,-15" />
 		<style_entry name="size" 						value="228,73" />
 	</style>
 
