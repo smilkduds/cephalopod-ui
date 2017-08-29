@@ -1,6 +1,7 @@
 <styles>
 	<!-- cephalopod ui -->
-	<style name="cui.toolbelt.items.window" type="window">
+	<!-- WINDOWS -->
+	<style name="cui.widnow.toolbelt" type="window">
 		<style_entry name="anchor" 					value="CenterBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="cursor_area" 		value="true" />
@@ -8,142 +9,138 @@
 		<style_entry name="pos" 						value="-313,85" />
 		<style_entry name="size" 						value="603,80" />
 	</style>
-	<style name="cui.toolbelt.number.label" type="label">
-		<style_entry name="depth" 					value="2" />
-		<style_entry name="font_size" 			value="20" />
-		<style_entry name="pivot" 					value="center" />
-		<style_entry name="effect" 					value="outline" />
-		<style_entry name="justify" 				value="center" />
-	</style>
-
-	<style name="cui.compass.window" type="window">
+	<style name="cui.window.compass" type="window">
 		<style_entry name="anchor" 					value="CenterTop" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="pos" 						value="-200,-9" />
 		<style_entry name="size" 						value="400,43" />
 	</style>
-	<style name="cui.compass.texture" type="texture">
-		<!-- <style_entry name="color" 					value="[iconColor]" /> -->
-		<style_entry name="color" 					value="[cui_experience]" />
-		<style_entry name="depth" 					value="8" />
-		<style_entry name="height" 					value="23" />
-		<style_entry name="pos" 						value="50, -15" />
-		<style_entry name="texture" 				value="Textures/UI/ui_game_compass" />
-		<style_entry name="tooltip" 				value="CHARACTER" />
-		<style_entry name="width" 					value="300" />
+	<style name="cui.window.player" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-521,85" />
+		<style_entry name="size"						value="203,80" />
+	</style>
+	<style name="cui.window.wellness" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="295,85" />
+		<style_entry name="size"						value="203,80" />
+	</style>
+	<style name="cui.window.experience" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-313,100" />
+		<style_entry name="size"						value="603,13" />
+	</style>
+	<style name="cui.window.stats" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-496,128" />
+		<style_entry name="size"						value="178,41" />
+	</style>
+	<style name="cui.window.ammo" type="window">
+		<style_entry name="anchor"					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="295,128" />
+		<style_entry name="size"						value="178,41" />
+	</style>
+	<style name="cui.window.vehicle" type="window">
+		<style_entry name="anchor" 					value="CenterBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth" 					value="5" />
+		<style_entry name="pos" 						value="-313,85" />
+		<style_entry name="size" 						value="603,80" />
+	</style>
+	<style name="cui.window.collected" type="window">
+		<style_entry name="anchor"					value="RightBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="-10,10" />
+		<style_entry name="size"						value="175,75" />
+	</style>
+	<style name="cui.window.buffs" type="window">
+		<style_entry name="anchor"					value="LeftBottom" />
+		<style_entry name="backgroundcolor"	value="[black]" />
+		<style_entry name="depth"						value="5" />
+		<style_entry name="pos"							value="10,10" />
+		<style_entry name="size"						value="175,75" />
 	</style>
 
-	<style name="cui.background.panel" type="panel">
+	<!-- LABELS -->
+	<style name="cui.label.toolbelt" type="label">
+		<style_entry name="color"						value="[BlueGrey]" />
+		<style_entry name="depth" 					value="2" />
+		<style_entry name="effect" 					value="outline" />
+		<style_entry name="font_size" 			value="20" />
+		<style_entry name="justify" 				value="center" />
+		<style_entry name="pivot" 					value="center" />
+	</style>
+	<style name="cui.label.text" type="label">
+		<style_entry name="name"						value="TextContent" />
+		<style_entry name="effect"					value="outline" />
+	</style>
+
+	<!-- PANELS -->
+	<style name="cui.panel.background" type="panel">
 		<style_entry name="name"									value="background" />
 		<style_entry name="depth"									value="0" />
-		<style_entry name="atlas"									value="ItemIconAtlas" />
-		<style_entry name="backgroundspritename"	value="cui_fill" />
+		<style_entry name="backgroundspritename"	value="ui_game_panel_header" />
 		<style_entry name="color"									value="[black]" />
 	</style>
-	<style name="cui.background.sprite" type="sprite">
-		<!-- <style_entry name="name"						value="background" /> -->
-		<style_entry name="depth"						value="0" />
-		<style_entry name="atlas"						value="ItemIconAtlas" />
-		<style_entry name="sprite"					value="cui_fill" />
-		<style_entry name="color"						value="[black]" />
-		<style_entry name="type"						value="sliced" />
+
+	<!-- RECTS -->
+	<style name="cui.rect.bar" type="rect">
+		<style_entry name="height"					value="38" />
+		<style_entry name="width"						value="200" />
+		<style_entry name="visible"					value="{statvisible}" />
 	</style>
-	<style name="cui.border.sprite" type="sprite">
-		<!-- <style_entry name="name"									value="backgroundFrame" /> -->
+
+	<!-- SPRITES -->
+	<style name="cui.sprite.border" type="sprite">
 		<style_entry name="depth"						value="8" />
 		<style_entry name="sprite"					value="menu_empty3px" />
 		<style_entry name="color"						value="[black]" />
 		<style_entry name="type"						value="sliced" />
 		<style_entry name="fillcenter"			value="false" />
 	</style>
-	<style name="cui.icon.sprite" type="sprite">
+	<style name="cui.sprite.background" type="sprite">
+		<style_entry name="name"						value="background" />
+		<style_entry name="depth"						value="0" />
+		<style_entry name="sprite"					value="menu_empty3px" />
+		<style_entry name="color"						value="[black]" />
+		<style_entry name="type"						value="sliced" />
+		<style_entry name="fillcenter"			value="true" />
+	</style>
+	<style name="cui.sprite.icon" type="sprite">
 		<style_entry name="name"						value="Icon" />
-		<style_entry name="atlas"						value="ItemIconAtlas" />
 		<style_entry name="foregroundlayer"	value="true" />
 	</style>
-	<style name="cui.text.label" type="label">
-		<style_entry name="name"						value="TextContent" />
-		<style_entry name="effect"					value="outline" />
-	</style>
-	<style name="cui.bar.fill.sprite" type="sprite">
+	<style name="cui.sprite.fill" type="sprite">
 		<style_entry name="name"						value="BarContent" />
-		<style_entry name="atlas"						value="ItemIconAtlas" />
-		<style_entry name="sprite"					value="cui_fill" />
+		<style_entry name="sprite"					value="menu_empty3px" />
 		<style_entry name="type"						value="filled" />
 		<style_entry name="controller"			value="PlayerStatsWindow" />
 	</style>
-	<style name="cui.bar.rect" type="rect">
-		<style_entry name="height"					value="38" />
-		<style_entry name="width"						value="200" />
-		<style_entry name="visible"					value="{statvisible}" />
-	</style>
 
-	<style name="cui.player.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-521,85" />
-		<style_entry name="size"						value="203,80" />
-	</style>
-
-	<style name="cui.wellness.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="295,85" />
-		<style_entry name="size"						value="203,80" />
-	</style>
-
-	<style name="cui.experience.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-313,100" />
-		<style_entry name="size"						value="603,13" />
-	</style>
-
-	<style name="cui.stats.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-496,128" />
-		<style_entry name="size"						value="178,41" />
-	</style>
-
-	<style name="cui.ammo.window" type="window">
-		<style_entry name="anchor"					value="CenterBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="295,128" />
-		<style_entry name="size"						value="178,41" />
-	</style>
-
-	<style name="cui.vehicle.window" type="window">
-		<style_entry name="anchor" 					value="CenterBottom" />
-		<style_entry name="depth" 					value="5" />
-		<style_entry name="pos" 						value="-313,85" />
-		<style_entry name="size" 						value="603,80" />
-	</style>
-
-	<style name="cui.collected.window" type="window">
-		<style_entry name="anchor"					value="RightBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="-10,10" />
-		<style_entry name="size"						value="175,75" />
-	</style>
-
-	<style name="cui.buffs.window" type="window">
-		<style_entry name="anchor"					value="LeftBottom" />
-		<style_entry name="depth"						value="5" />
-		<style_entry name="pos"							value="10,10" />
-		<style_entry name="size"						value="175,75" />
+	<!-- TEXTURES -->
+	<style name="cui.texture.compass" type="texture">
+		<!-- <style_entry name="color" 					value="[iconColor]" /> -->
+		<style_entry name="color" 					value="[BlueGrey]" />
+		<style_entry name="depth" 					value="8" />
+		<style_entry name="height" 					value="23" />
+		<style_entry name="pos" 						value="50,-15" />
+		<style_entry name="texture" 				value="Textures/UI/ui_game_compass" />
+		<style_entry name="tooltip" 				value="CHARACTER" />
+		<style_entry name="width" 					value="300" />
 	</style>
 
 
-
-	<style name="cui.buffs.popout.window" type="window">
-		<style_entry name="anchor" 					value="LeftBottom" />
-		<style_entry name="backgroundcolor" value="[black]" />
-		<style_entry name="depth" 					value="5" />
-		<!-- <style_entry name="pos" 						value="10,53" /> -->
-		<style_entry name="pos" 						value="10,50" />
-		<style_entry name="size" 						value="168,43" />
-	</style>
 	<!-- end cephalopod ui -->
 
 	<global>
