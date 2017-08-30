@@ -129,22 +129,16 @@
 		<panel style="cui.panel.background">
 			<sprite style="cui.sprite.background" />
 			<sprite style="cui.sprite.border" />
+			<label style="cui.label.text" depth="5" text="Lvl [DECEA3]{playerlevel}[-]" controller="PlayerStatsWindow" justify="left" pivot="left" pos="10,-19" upper_case="false" />
 			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="175" cell_height="38" repeat_content="false" side="left">
 				<rect width="175" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
 					<sprite style="cui.sprite.border" pos="-3,3" size="178,41" />
 					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="35,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
-					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="46,-16" color="[Grey]" />
+					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="35,30" pivot="center" pos="157,-16" color="{staticoncolor}" foregroundlayer="true" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="35,-16" color="[Grey]" width="100" />
 				</rect>
 			</grid>
 		</panel>
-		<!-- <grid name="hud" pos="-177,52" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="right">
-			<rect width="168" height="43" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
-				<sprite depth="3" pos="3,0"  name="BarContent" sprite="{statimage|once}" height="43" width="162" />
-				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="36,32" pos="130,-6" color="{staticoncolor}" foregroundlayer="true" />
-				<label depth="6" name="TextContent" pos="15,-8" font_size="28" color="[white]" justify="center" text="{statcurrentwithmax}" height="30"/>
-			</rect>
-		</grid> -->
 	</window>
 
 	<!-- VEHICLE -->
