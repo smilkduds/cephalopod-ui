@@ -112,7 +112,7 @@
 			<!-- <window name="HUDRightStatBars" anchor="RightBottom" /> -->
 			<window name="windowQuestTracker" anchor="RightTop" />
 
-			<window name="cui_toolbelt_items" />
+			<window name="cui_toolbelt" />
 			<window name="cui_player" />
 			<window name="cui_wellness" />
 			<window name="cui_experience" />
@@ -121,9 +121,6 @@
 			<window name="cui_vehicle" />
 			<window name="cui_collected" />
 			<window name="cui_buffs" />
-
-			<!-- <window name="cui_buffs_popout" /> -->
-			<!-- <window name="cui_color_test" /> -->
 		</window_group>
 		<!-- end cephalopod ui -->
 

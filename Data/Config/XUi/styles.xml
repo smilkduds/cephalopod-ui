@@ -1,7 +1,7 @@
 <styles>
 	<!-- cephalopod ui -->
 	<!-- WINDOWS -->
-	<style name="cui.widnow.toolbelt" type="window">
+	<style name="cui.window.toolbelt" type="window">
 		<style_entry name="anchor" 					value="CenterBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="cursor_area" 		value="true" />
@@ -62,14 +62,14 @@
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
 		<style_entry name="pos"							value="-10,10" />
-		<style_entry name="size"						value="175,75" />
+		<style_entry name="size"						value="125,50" />
 	</style>
 	<style name="cui.window.buffs" type="window">
 		<style_entry name="anchor"					value="LeftBottom" />
 		<style_entry name="backgroundcolor"	value="[black]" />
 		<style_entry name="depth"						value="5" />
 		<style_entry name="pos"							value="10,10" />
-		<style_entry name="size"						value="175,75" />
+		<style_entry name="size"						value="125,50" />
 	</style>
 
 	<!-- LABELS -->
@@ -90,7 +90,7 @@
 	<style name="cui.panel.background" type="panel">
 		<style_entry name="name"									value="background" />
 		<style_entry name="depth"									value="0" />
-		<style_entry name="backgroundspritename"	value="ui_game_panel_header" />
+		<style_entry name="backgroundspritename"	value="ui_game_header_fill" />
 		<style_entry name="color"									value="[black]" />
 	</style>
 
