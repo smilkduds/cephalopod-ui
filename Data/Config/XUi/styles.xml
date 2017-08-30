@@ -334,15 +334,15 @@
 
 	<!--ITEM STACKS-->
 	<style name="itemStack">
-		<style_entry name="select_color" value="[beige]"/>
-		<style_entry name="press_color" value="[limeGreen]"/>
-		<style_entry name="final_pressed_color" value="[lightGrey]"/>
-		<style_entry name="background_color" value="[mediumGrey]"/>
-		<style_entry name="highlight_color" value="[hoverColor]"/>
-		<style_entry name="holding_color" value="[white]"/>
+		<style_entry name="select_color" value="[Teal]"/>								<!-- #009688 -->
+		<style_entry name="press_color" value="[Lime]"/>								<!-- #cddc39 -->
+		<style_entry name="final_pressed_color" value="[lightGrey]"/>		<!-- #808080 -->
+		<style_entry name="background_color" value="[darkGrey]"/>				<!-- #404040 -->
+		<style_entry name="highlight_color" value="[Emerald]"/>					<!-- #2ecc71 -->
+		<style_entry name="holding_color" value="[Green]"/>							<!-- #4caf50 -->
 		<style_entry name="width" value="72"/>
 		<style_entry name="height" value="72"/>
-		<style_entry name="hover_icon_grow" value="1.5"/>
+		<style_entry name="hover_icon_grow" value="1.25"/>							<!-- 1.5 -->
 		<style_entry name="on_press" value="true"/>
 		<style_entry name="sound_volume" value="0.75"/>
 		<style_entry name="pickup_sound" value="[pickup_click]"/>
