@@ -1,254 +1,184 @@
 <windows>
 	<!-- cephalopod ui -->
 	<!-- TOOLBELT -->
-	<window name="cui_toolbelt_items" style="cui.toolbelt.items.window" controller="ToolbeltWindow" visible="{toolbeltvisible}">
+	<window name="cui_toolbelt" style="cui.window.toolbelt" controller="ToolbeltWindow" visible="{toolbeltvisible}">
 		<rect>
-			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
+			<!-- <sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" /> -->
+			<!-- <sprite style="cui.sprite.background" /> -->
+			<sprite style="cui.sprite.border" name="backgroundMain" on_press="true" />
 			<grid depth="1" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
 				<item_stack name="0"/>
 			</grid>
 		</rect>
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]1" pos="9,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]2" pos="84,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]3" pos="159,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]4" pos="234,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]5" pos="309,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]6" pos="384,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]7" pos="459,-12" />
-		<label style="cui.toolbelt.number.label" text=" [DECEA3]8" pos="534,-12" />
+		<label style="cui.label.toolbelt" text=" 1" pos="9,-12" />
+		<label style="cui.label.toolbelt" text=" 2" pos="84,-12" />
+		<label style="cui.label.toolbelt" text=" 3" pos="159,-12" />
+		<label style="cui.label.toolbelt" text=" 4" pos="234,-12" />
+		<label style="cui.label.toolbelt" text=" 5" pos="309,-12" />
+		<label style="cui.label.toolbelt" text=" 6" pos="384,-12" />
+		<label style="cui.label.toolbelt" text=" 7" pos="459,-12" />
+		<label style="cui.label.toolbelt" text=" 8" pos="534,-12" />
 	</window>
 
 	<!-- COMPASS -->
-	<window name="cui_compass" style="cui.compass.window" controller="CompassWindow">
-		<sprite style="cui.background.sprite" pos="48,0" size="305,43" />
-		<sprite style="cui.border.sprite" pos="48,0" size="305,43" />
-		<sprite style="cui.background.sprite" depth="1" color="[black_half_alpha]" pos="51,-3" size="300,37">
-			<sprite depth="11" pos="150,0" pivot="top" width="3" color="[Lime]" type="sliced" />
+	<window name="cui_compass" style="cui.window.compass" controller="CompassWindow">
+		<sprite style="cui.sprite.background" pos="48,0" size="305,43" />
+		<sprite style="cui.sprite.border" pos="48,0" size="305,43" />
+		<sprite style="cui.sprite.background" depth="1" color="[black_half_alpha]" pos="51,-3" size="300,37">
+			<sprite depth="11" pos="150,0" pivot="top" width="3" color="[BlueGrey]" type="sliced" />
 		</sprite>
-		<texture style="cui.compass.texture" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
+		<texture style="cui.texture.compass" name="compassTexture" rect_size="0.25,1" rect_offset=".8,0">
 		</texture>
 		<rect pivot="topright" pos="-55,0" size="100,43">
-			<!-- <sprite style="cui.background.sprite" /> -->
-			<sprite style="cui.icon.sprite" sprite="cui_symbol_calendar_outline" pivot="bottomright" size="30,30" pos="100,-43" />
-			<label style="cui.text.label" text="[DECEA3]{day|always}" justify="right" pivot="bottomright" pos="67,-43" />
+			<!-- <sprite style="cui.sprite.background" /> -->
+			<label style="cui.label.text" text="[DECEA3]{day|always}[-] Day" justify="right" pivot="bottomright" pos="95,-43" />
 		</rect>
 		<rect pivot="topleft" pos="356,0" size="100,43">
-			<!-- <sprite style="cui.background.sprite" /> -->
-			<sprite style="cui.icon.sprite" sprite="cui_symbol_clock_outline" pivot="bottomleft" size="30,30" pos="0,-43"/>
-			<label style="cui.text.label" text="[DECEA3]{time|always}" justify="left" pivot="bottomleft" pos="33,-43" />
+			<!-- <sprite style="cui.sprite.background" /> -->
+			<label style="cui.label.text" text="Time [DECEA3]{time|always}[-]" justify="left" pivot="bottomleft" pos="5,-43" />
 		</rect>
 	</window>
 
 	<!-- PLAYER -->
-	<window name="cui_player" style="cui.player.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_player" style="cui.window.player">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
 			<grid depth="1" rows="2" cols="1" pos="3,-3" cell_width="200" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Health">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[Red]" fill="{playerhealthfill}" size="200,35" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_health" pivot="center" size="30,30" pos="16,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="Health">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[Red]" fill="{playerhealthfill}" size="200,35" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_add" pivot="center" size="30,30" pos="16,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Stamina">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[Green]" fill="{playerstaminafill}" size="200,35" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_stamina" pivot="center" size="30,30" pos="16,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="Stamina">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[Green]" fill="{playerstaminafill}" size="200,35" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_run" pivot="center" size="30,30" pos="16,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-16" width="194" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
 			</grid>
 		</panel>
 	</window>
 
 	<!-- WELLNESS -->
-	<window name="cui_wellness" style="cui.wellness.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_wellness" style="cui.window.wellness">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
 			<grid depth="1" rows="2" cols="1" pos="3,-3" cell_width="200" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Food">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[Brown]" fill="{playerfoodfill}" size="200,35" pivot="bottomright" rotation="180" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_food" pivot="center" size="30,30" pos="181,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="Food">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[Brown]" fill="{playerfoodfill}" size="200,35" pivot="bottomright" rotation="180" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_fork" pivot="center" size="30,30" pos="181,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Water">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[Blue]" fill="{playerwaterfill}" size="200,35" pivot="bottomright" rotation="180" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_drink" pivot="center" size="30,30" pos="181,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="Water">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[Blue]" fill="{playerwaterfill}" size="200,35" pivot="bottomright" rotation="180" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_water" pivot="center" size="30,30" pos="181,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrent}%" justify="left" pivot="left" pos="5,-16" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
 			</grid>
 		</panel>
 	</window>
 
 	<!-- EXPERIENCE -->
-	<window name="cui_experience" style="cui.experience.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_experience" style="cui.window.experience">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
 			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="600" cell_height="10" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="Stamina" height="10" width="600">
-					<sprite style="cui.border.sprite" pos="-3,3" size="603,13" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite depth="3" atlas="ItemIconAtlas" sprite="cui_fill" color="[BlueGrey]" type="filled" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="603,13" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="Stamina" height="10" width="600">
+					<sprite style="cui.sprite.border" pos="-3,3" size="603,13" />
+					<sprite style="cui.spritebackground" depth="2" color="[black_half_alpha]" />
+					<sprite depth="3" sprite="menu_empty3px" color="[BlueGrey]" type="filled" fill="{playerlevelfill}" controller="PlayerStatsWindow" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="603,13" />
 					</rect>
 			</grid>
 		</panel>
 	</window>
 
 	<!-- STATS -->
-	<window name="cui_stats" style="cui.stats.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_stats" style="cui.window.stats">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
 			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="175" cell_height="38" repeat_content="false" side="left">
-				<rect style="cui.bar.rect" width="175">
-					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_thermometer" pivot="center" size="30,30" pos="16,-16" color="[Grey]" />
-					<label  style="cui.text.label" depth="5" text="{maptemperature}" justify="left" pivot="left" pos="38,-16" controller="MapStats" color="[Grey]" size="132,35" />
-					<label  style="cui.text.label" depth="5" text="{playercoretemp}" justify="right" pivot="left" pos="38,-16" controller="PlayerStatsWindow" color="[Grey]" size="132,35" />
+				<rect style="cui.rect.bar" width="175">
+					<sprite style="cui.sprite.border" pos="-3,3" size="178,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" width="175" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_temperature" pivot="center" size="30,30" pos="16,-16" color="[Grey]" />
+					<label  style="cui.label.text" depth="5" text="{maptemperature}" justify="left" pivot="left" pos="38,-16" controller="MapStats" color="[Grey]" size="132,35" />
+					<label  style="cui.label.text" depth="5" text="{playercoretemp}" justify="right" pivot="left" pos="38,-16" controller="PlayerStatsWindow" color="[Grey]" size="132,35" />
 				</rect>
 			</grid>
 		</panel>
 	</window>
 
 	<!-- AMMO/FUEL -->
-	<window name="cui_ammo" style="cui.ammo.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_ammo" style="cui.window.ammo">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
+			<label style="cui.label.text" depth="5" text="Lvl [DECEA3]{playerlevel}[-]" controller="PlayerStatsWindow" justify="left" pivot="left" pos="10,-19" upper_case="false" />
 			<grid depth="1" rows="1" cols="1" pos="3,-3" cell_width="175" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="ActiveItem" width="175">
-					<sprite style="cui.border.sprite" pos="-3,3" size="178,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" width="175" />
-					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="34,30" pivot="center" pos="18,-16" color="{staticoncolor}" foregroundlayer="true" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="46,-16" color="[Grey]" />
+				<rect width="175" controller="HUDStatBar" stat_type="ActiveItem" visible="{statvisible}">
+					<sprite style="cui.sprite.border" pos="-3,3" size="178,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" width="175" />
+					<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon}" size="35,30" pivot="center" pos="157,-16" color="{staticoncolor}" foregroundlayer="true" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="35,-16" color="[Grey]" width="100" />
 				</rect>
 			</grid>
 		</panel>
 	</window>
 
 	<!-- VEHICLE -->
-	<window name="cui_vehicle" style="cui.vehicle.window">
-		<panel style="cui.background.panel">
-			<sprite style="cui.background.sprite" />
-			<sprite style="cui.border.sprite" />
+	<window name="cui_vehicle" style="cui.window.vehicle">
+		<panel style="cui.panel.background">
+			<sprite style="cui.sprite.background" />
+			<sprite style="cui.sprite.border" />
 			<grid depth="1" rows="1" cols="3" pos="3,-3" cell_width="200" cell_height="38" repeat_content="false" side="left">
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="VehicleHealth">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[BlueGrey]" fill="{vehiclehealthfill}" controller="VehicleStatsWindow" size="200,35" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_scooter" pivot="center" size="30,30" pos="16,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="5,-54" size="192,35" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="VehicleHealth">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[BlueGrey]" fill="{vehiclehealthfill}" controller="VehicleStatsWindow" size="200,35" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_minibike" pivot="center" size="30,30" pos="16,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="left" pivot="left" pos="5,-54" size="192,35" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="VehicleBattery">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_battery" pivot="center" size="30,30" pos="100,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="center" pivot="center" pos="100,-54" size="200,35" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="VehicleBattery">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_battery" pivot="center" size="30,30" pos="100,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="center" pivot="center" pos="100,-54" size="200,35" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
-				<rect controller="HUDStatBar" style="cui.bar.rect" stat_type="VehicleFuel">
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
-					<sprite style="cui.background.sprite" depth="2" color="[black_half_alpha]" />
-					<sprite style="cui.bar.fill.sprite" depth="3" color="[Amber]" fill="{vehiclefuelfill}" controller="VehicleStatsWindow" size="200,35" pivot="bottomright" rotation="180" />
-					<sprite style="cui.icon.sprite" depth="4" sprite="cui_symbol_fuel" pivot="center" size="30,30" pos="181,-16" />
-					<label  style="cui.text.label" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-54" size="192,35" />
-					<sprite style="cui.border.sprite" pos="-3,3" size="203,41" />
+				<rect controller="HUDStatBar" style="cui.rect.bar" stat_type="VehicleFuel">
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
+					<sprite style="cui.sprite.background" depth="2" color="[black_half_alpha]" />
+					<sprite style="cui.sprite.fill" depth="3" color="[Amber]" fill="{vehiclefuelfill}" controller="VehicleStatsWindow" size="200,35" pivot="bottomright" rotation="180" />
+					<sprite style="cui.sprite.icon" depth="4" sprite="ui_game_symbol_gas" pivot="center" size="30,30" pos="181,-16" />
+					<label  style="cui.label.text" depth="5" text="{statcurrentwithmax}" justify="right" pivot="left" pos="0,-54" size="192,35" />
+					<sprite style="cui.sprite.border" pos="-3,3" size="203,41" />
 				</rect>
 			</grid>
 		</panel>
 	</window>
 
-
-	<!-- COLOR TEST -->
-	<window name="cui_color_test" anchor="CenterCenter" pivot="top" pos="0,200" size="300,400">
-		<rect name="uiFlat" pivot="topright" pos="-150,0" size="100,400">
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,0"			color="[Turquoise]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-20"		color="[GreenSea]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-40"		color="[Emerald]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-60"		color="[Nephritis]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-80"		color="[PeterRiver]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-100"	color="[Belizehole]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-120"	color="[Amethyst]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-140"	color="[Wisteria]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-160"	color="[WetAsphalt]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-180"	color="[MidnightBlue]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-200"	color="[Sunflower]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-220"	color="[fOrange]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-240"	color="[Carrot]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-260"	color="[Pumpkin]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[Alizarin]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-300"	color="[Pomegranate]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-320"	color="[Clouds]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-340"	color="[Silver]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-360"	color="[Concrete]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-380"	color="[Asbestos]" />
-		</rect>
-
-		<rect name="uiMaterial" pivot="topright" pos="150,0" size="100,400">
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,0"			color="[Red]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-20"		color="[Pink]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-40"		color="[Purple]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-60"		color="[DeepPurple]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-80"		color="[Indigo]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-100"	color="[Blue]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-120"	color="[LightBlue]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-140"	color="[Cyan]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-160"	color="[Teal]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-180"	color="[Green]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-200"	color="[LightGreen]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-220"	color="[Lime]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-240"	color="[Yellow]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-260"	color="[Amber]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-280"	color="[mOrange]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-300"	color="[DeepOrange]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-320"	color="[Brown]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-340"	color="[Grey]" />
-			<sprite style="cui.icon.sprite" sprite="cui_fill" size="100,20" pos="0,-360"	color="[BlueGrey]" />
-		</rect>
-	</window>
-
-
-
-
-
-	<window name="cui_collected_items" style="cui.collected.items.window">
-		<rect name="hud" pos="-90,61" side="right" controller="CollectedItemList" pivot="BottomLeft">
-			<panel width="228" height="73" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0">
-				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="73" width="222" pivot="center" />
-				<sprite depth="4" name="Icon" atlas="ItemIconAtlas" pos="50,0" size="56,48" pivot="center" foregroundlayer="true" />
-				<label depth="6" name="TextContent" font_size="32" color="[white]" justify="center" height="30" pivot="center" />
-				<sprite depth="6" name="Negative" sprite="ui_game_symbol_x" color="[red]" pos="0,16" width="32" height="32" />
-			</panel>
-		</rect>
-	</window>
-
-	<window name="cui_buffs_popout" style="cui.buffs.popout.window" controller="BuffPopoutList">
-		<panel name="item" visible="false" disableautobackground="true">
-			<sprite depth="3" name="Background" sprite="ui_game_popup" color="[transparent]" pos="0,0" height="43" width="162" flip="Horizontally" />
-			<sprite depth="4" name="Icon" color="[transparent]" pos="5,-5" size="36,32" />
-			<label depth="6" name="TextContent" color="[white]" font_size="28" pos="46,-5" height="30" justify="left" />
-		</panel>
-	</window>
-
+	<!-- INGAME MENU -->
 	<window name="cui_ingameMenu" anchor="CenterCenter" pos="0,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true" pivot="center">
-		<sprite name="cephalopod" depth="1"  style="cui.icon.sprite" sprite="cui_cephalopod" size="80,80" pos="0,150" color="[BlueGrey]" pivot="top" />
-		<label  name="cephalopod" depth="10" style="cui.text.label"  text="CEPHALOPOD UI v2.3" size="250,50" pos="0,80"  font_size="35" justify="center" color="[Grey]" upper_case="false" pivot="center" />
-		<label  name="cephalopod" depth="10" style="cui.text.label"  text="https://github.com/smilkduds/cephalopod-ui" size="300,50" pos="0,55"  justify="center" color="[Grey]" upper_case="false" pivot="center" />
+		<!-- <sprite name="cephalopod" depth="1"  style="cui.spirte.icon" sprite="cui_cephalopod" size="80,80" pos="0,150" color="[BlueGrey]" pivot="top" /> -->
+		<label  name="cephalopod" depth="10" style="cui.label.text"  text="CEPHALOPOD UI v3.0" size="250,50" pos="0,80"  font_size="35" justify="center" color="[BlueGrey]" upper_case="false" pivot="center" />
+		<label  name="cephalopod" depth="10" style="cui.label.text"  text="https://github.com/smilkduds/cephalopod-ui" size="300,50" pos="0,55"  justify="center" color="[Grey]" upper_case="false" pivot="center" />
 		<grid name="buttons" pos="-125,0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
 			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
 			<simplebutton name="btnSave" depth="3" width="250" height="46" caption_key="xuiMenuSave" font_size="40" />
@@ -256,7 +186,31 @@
 		</grid>
 	</window>
 
+	<!-- COLLECTED ITEMS -->
+	<window name="cui_collected" style="cui.window.collected">
+		<rect name="hud" controller="CollectedItemList" side="right" pivot="bottomright">
+			<panel name="item" visible="false" pivot="right" disableautobackground="true">
+				<sprite style="cui.sprite.background" pivot="bottomright" sprite="ui_game_popup" />
+				<sprite style="cui.sprite.border" pivot="bottomright" />
+				<sprite style="cui.sprite.icon" depth="4" pivot="right" pos="-10,25" size="35,30" />
+				<label  style="cui.label.text" depth="5" font_size="32" justify="right" pivot="right" pos="-55,25" color="[Grey]" />
+				<sprite style="cui.sprite.icon" name="Negative" sprite="ui_game_symbol_x" depth="6" pivot="right" pos="-10,25" size="20,20" color="[Red]" />
+			</panel>
+		</rect>
+	</window>
 
+	<!-- PLAYER BUFFS -->
+	<window name="cui_buffs" style="cui.window.buffs">
+		<rect name="hud" controller="BuffPopoutList" side="left" pivot="bottomleft">
+			<panel name="item" visible="false" pivot="left" disableautobackground="true">
+				<sprite style="cui.sprite.background" pivot="bottomleft" name="Background" sprite="ui_game_popup" flip="Horizontally" />
+				<!-- <sprite name="Background" sprite="ui_game_popup" pivot="bottomleft" flip="Horizontally" /> -->
+				<sprite style="cui.sprite.border" pivot="bottomleft" name="Background" />
+				<sprite depth="4" name="Icon" size="35,30" pos="10,25" pivot="left" color="[white]" />
+				<label  style="cui.label.text" depth="5" font_size="28" justify="left" pivot="left" pos="55,25" color="[Grey]" />
+			</panel>
+		</rect>
+	</window>
 	<!-- end cephalopod ui -->
 
 
@@ -442,9 +396,9 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowCraftingQueue" width="397" height="78" panel="Left" cursor_area="true" >
 	<!--#$-IGS END.-$#-->
-		<rect depth="0" pos="96,0" width="303" controller="CraftingQueue">
+		<rect depth="0" pos="18,0" width="378" controller="CraftingQueue">
 			<!-- <sprite name="background" color="[black]" type="sliced" pos="0,-10" /> -->
-			<grid name="queue" rows="1" cols="4" pos="3,-13" cell_width="75" cell_height="75" repeat_content="true">
+			<grid name="queue" rows="1" cols="5" pos="3,-13" cell_width="75" cell_height="75" repeat_content="true">
 				<recipe_stack name="0"/>
 			</grid>
 		</rect>
