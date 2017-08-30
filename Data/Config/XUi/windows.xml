@@ -177,7 +177,7 @@
 	<!-- INGAME MENU -->
 	<window name="cui_ingameMenu" anchor="CenterCenter" pos="0,200" width="250" height="200" controller="InGameMenuWindow" cursor_area="true" pivot="center">
 		<!-- <sprite name="cephalopod" depth="1"  style="cui.spirte.icon" sprite="cui_cephalopod" size="80,80" pos="0,150" color="[BlueGrey]" pivot="top" /> -->
-		<label  name="cephalopod" depth="10" style="cui.label.text"  text="CEPHALOPOD UI v2.3" size="250,50" pos="0,80"  font_size="35" justify="center" color="[BlueGrey]" upper_case="false" pivot="center" />
+		<label  name="cephalopod" depth="10" style="cui.label.text"  text="CEPHALOPOD UI v3.0" size="250,50" pos="0,80"  font_size="35" justify="center" color="[BlueGrey]" upper_case="false" pivot="center" />
 		<label  name="cephalopod" depth="10" style="cui.label.text"  text="https://github.com/smilkduds/cephalopod-ui" size="300,50" pos="0,55"  justify="center" color="[Grey]" upper_case="false" pivot="center" />
 		<grid name="buttons" pos="-125,0" cols="1" width="250" cell_width="250" cell_height="56" arrangement="vertical" repeat_content="false" >
 			<simplebutton name="btnOptions" depth="3" width="250" height="46" caption_key="xuiMenuOptions" font_size="40" />
